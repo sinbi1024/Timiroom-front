@@ -8,7 +8,6 @@ import HellowA from './components/hellow.vue';
 <template>
 	<img alt="Vue logo" src="./assets/logo.png" />
 	<HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  hi!
   <HellowA></HellowA>
 </template>
 

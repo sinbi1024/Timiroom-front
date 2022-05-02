@@ -32,7 +32,7 @@ export default defineComponent( {
 <template>
 <section>
   <div>{{count}}</div>
-  <button @click="click">눌러죠</button>
+  <button @click="click">1씩 증가</button><br>
   <input type="file" @change="getImage">
   <div>{{name}}</div>
 </section>
