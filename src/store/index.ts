@@ -1,12 +1,19 @@
-import { createStore, Store } from 'vuex'
+import {createStore, Store} from 'vuex'
 
-export default createStore({
+export interface stateType {
+    click: number;
+    hi: string;
+}
+
+export default createStore<stateType>({
     state: {
+        click: 0,
+        hi: 'hi'
     },
     mutations: {
+        click(state, v) {
+            state.click = v;
+        }
     },
-    actions: {
-    },
-    modules: {
-    }
+
 });

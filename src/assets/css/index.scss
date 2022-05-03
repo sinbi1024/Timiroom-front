@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+
+.tool {
+  background-color: #7F8CAD;
+  height: 30px;
+  text-align: right;
+  color: #FFFFFF;
+
+  span {
+    margin: 10px;
+    // 위에서 10px 정도 띄우고 싶어요
+  }
+}

@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+
+.tool {
+  background-color: #7F8CAD;
+  height: 30px;
+  text-align: right;
+  color: #FFFFFF;
+}
+.tool span {
+  margin: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */

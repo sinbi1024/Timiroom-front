@@ -1,9 +1,8 @@
 <script lang="ts">
-import {defineComponent, ref, onMounted} from "vue";
+import {defineComponent} from "vue";
 
 export default defineComponent({
-  // name: "homep",
-  setup(props) {
+  setup() {
 
     return {}
   }
@@ -11,4 +10,5 @@ export default defineComponent({
 </script>
 
 <template>
+  <h1>개요</h1>
 </template>
