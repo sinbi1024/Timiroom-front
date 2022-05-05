@@ -13,10 +13,7 @@ export default defineComponent({
 
 <template>
   <section>
-    <div class="user-wrap">
-      <div class="tool"></div>
-      <div class="user-qna" @click="this.$router.push('/qna')">문의하기</div>
-    </div>
+    문의하십시오.
   </section>
 </template>
 

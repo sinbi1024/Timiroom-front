@@ -19,7 +19,7 @@ export default defineComponent({
 <template>
   <section>
     <div class="menu">
-      <div @click="moveTo('/')">메인</div>
+      <img class="logo" @click="moveTo('/')" src="../../public/assets/image/logo.png">
       <div @click="moveTo('/summ')">개요</div>
       <div @click="moveTo('/service')">서비스</div>
       <div @click="moveTo('/tech')">기술</div>
@@ -28,17 +28,4 @@ export default defineComponent({
 </template>
 
 <style scoped lang="scss">
-.menu {
-  height: 70px;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 40px;
-  color: #7F8CAD;
-  font-size: 28px;
-  font-weight: bold;
-
-  div {
-    margin-right: 55px;
-  }
-}
 </style>

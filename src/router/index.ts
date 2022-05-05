@@ -1,30 +1,36 @@
 import { RouteRecordRaw, createRouter, createWebHashHistory } from "vue-router";
-import Main from "../views/Home.vue";
-import Summ from "../views/Summary.vue";
-import Service from "../views/Service.vue";
-import Tech from "../views/Tech.vue";
+import home from "../views/Home.vue";
+import summ from "../views/Summary.vue";
+import service from "../views/Service.vue";
+import tech from "../views/Tech.vue";
+import qna from "../views/Qna.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "Main",
-    component: Main,
+    component: home,
   },
   {
     // 개요
     path: "/summ",
     name: "Summ",
-    component: Summ,
+    component: summ,
   },
   {
     path: "/service",
     name: "Service",
-    component: Service,
+    component: service,
   },
   {
     path: "/tech",
     name: "Tech",
-    component: Tech,
+    component: tech,
+  },
+  {
+    path: "/qna",
+    name: "QnA",
+    component: qna,
   },
 ];
 

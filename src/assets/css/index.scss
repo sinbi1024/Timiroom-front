@@ -2,14 +2,129 @@ body {
   margin: 0;
 }
 
+@font-face {
+  font-family: 'Yeongdo-Rg';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 300;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+}
+
+.nanumbarungothic * {
+  font-family: 'NanumBarunGothic', sans-serif;
+}
+
+@font-face {
+  font-family: 'SimKyungha';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/SimKyungha.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.app {
+  font-family: 'NanumSquareRound';
+}
+
 .tool {
   background-color: #7F8CAD;
   height: 30px;
   text-align: right;
   color: #FFFFFF;
 
-  span {
-    margin: 10px;
+  div {
+    margin-right: 10px;
     // 위에서 10px 정도 띄우고 싶어요
   }
+}
+
+.menu {
+  height: 110px;
+  display: flex;
+  justify-content: flex-end;
+  color: #7F8CAD;
+  font-size: 28px;
+  font-weight: bold;
+
+  div {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 55px;
+    cursor: pointer;
+  }
+
+  .logo {
+    width: 360px;
+    margin-right: 735px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+}
+
+.banner {
+  opacity: 0.7;
+  width: 1440px;
+  height: 340px;
+}
+
+.user-wrap {
+  position: relative;
+}
+
+.user-qna {
+  position: absolute;
+  color: white;
+  top: 15%;
+  right: 1%;
+  cursor: pointer;
+}
+
+.user-text {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  color: white;
+  text-shadow: 0px 0px 6px #7F8CAD;
+  font-size: 70px;
+  font-weight: bold;
+  font-family: 'Yeongdo-Rg'
+}
+
+.user-text .innerSubText {
+  position: absolute;
+  color: white;
+  text-shadow: 0px 0px 6px #7F8CAD;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Yeongdo-Rg'
 }

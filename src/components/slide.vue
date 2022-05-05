@@ -12,14 +12,17 @@ export default defineComponent({
 
 <template>
   <section>
-    <img src="../../public/assets/image/main.jpg">
+    <div class="user-wrap">
+      <div class="user-img">
+        <img class="banner" src="../../public/assets/image/main.png">
+      </div>
+      <div class="user-text">
+        <span class="innerText">스마트 팩토리</span><br>
+        <span class="innerSubText">스마트 팩토리에 대한 멋진 내용</span>
+      </div>
+    </div>
   </section>
 </template>
 
 <style scoped>
-img {
-  opacity: 0.5;
-  width: 1440px;
-  height: 852px;
-}
 </style>
