@@ -4,6 +4,7 @@ import summ from "../views/Summary.vue";
 import service from "../views/Service.vue";
 import tech from "../views/Tech.vue";
 import qna from "../views/Qna.vue";
+import login from "../views/Login.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
