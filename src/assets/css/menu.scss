@@ -1,0 +1,73 @@
+.menu {
+  position: relative;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include fw {
+    height: 90px;
+  }
+
+  @include se {
+    height: 60px;
+  }
+}
+
+.logo {
+  height: 90px;
+  width: 310px;
+  margin-top: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+
+  @include fw {
+    height: 70px;
+    width: 240px;
+    margin-top: 10px;
+  }
+
+  @include sw {
+    height: 55px;
+    width: 200px;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+
+  @include se {
+    height: 40px;
+    width: 140px;
+    margin-top: 11px;
+    margin-left: 10px;
+  }
+}
+
+.menuText {
+  display: flex;
+  justify-content: flex-end;
+  color: #7F8CAD;
+  font-size: 30px;
+  font-weight: bold;
+
+  div {
+    margin-top: 40px;
+    margin-right: 38px;
+    cursor: pointer;
+
+    @include fw {
+      font-size: 20px;
+      margin-right: 20px;
+    }
+
+    @include sw {
+      font-size: 14px;
+      margin-right: 17px;
+    }
+
+    @include se {
+      font-size: 13px;
+      margin-top: 22px;
+      margin-right: 15px;
+    }
+  }
+}

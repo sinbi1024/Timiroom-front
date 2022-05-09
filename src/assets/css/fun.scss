@@ -1,0 +1,27 @@
+$fw: 700px; // first width: 로고와 메뉴 텍스트가 닿는 사이즈
+@mixin fw {
+  @media (max-width: $fw) {
+    @content;
+    @include trans();
+  }
+}
+
+$sw: 520px; // second width
+@mixin sw {
+  @media (max-width: $sw) {
+    @content;
+    @include trans();
+  }
+}
+
+$se: 375px; // se2 해상도
+@mixin se {
+  @media (max-width: $se) {
+    @content;
+    @include trans();
+  }
+}
+
+@mixin trans {
+  transition: 1s;
+}

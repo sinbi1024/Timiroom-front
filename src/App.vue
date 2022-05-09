@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import ToolBar from './components/toolbar.vue'
 import MenuBar from './components/menubar.vue';
-import SlideSec from './components/slide.vue';
+import SlideSec from './components/banner.vue';
 </script>
 
 <template>
-  <div class="app">
+  <div id="app">
     <ToolBar></ToolBar>
     <MenuBar></MenuBar>
     <SlideSec></SlideSec>

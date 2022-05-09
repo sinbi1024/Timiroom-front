@@ -14,8 +14,9 @@ export default defineComponent({
 <template>
   <section>
     <div class="user-wrap">
-      <div class="tool"></div>
-      <div class="user-qna" @click="this.$router.push('/qna')">문의하기</div>
+      <div class="tool">
+        <div class="user-qna" @click="this.$router.push('/qna')">문의하기</div>
+      </div>
     </div>
   </section>
 </template>

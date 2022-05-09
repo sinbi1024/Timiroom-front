@@ -4,8 +4,14 @@ import {defineComponent, onMounted, ref} from "vue";
 export default defineComponent({
   name: "PageInit",
   setup() {
+    const imageUrls = [
+      "../../public/assets/image/banner2.png",
+      "../../public/assets/image/banner3.png",
+    ];
 
-    return {}
+    return {
+      imageUrls,
+    }
   },
 });
 </script>
@@ -14,7 +20,7 @@ export default defineComponent({
   <section>
     <div class="user-wrap">
       <div class="user-img">
-        <img class="banner" src="../../public/assets/image/main.png">
+        <img class="banner" src="../../public/assets/image/banner1.png">
       </div>
       <div class="user-text">
         <span class="innerText">스마트 팩토리</span><br>

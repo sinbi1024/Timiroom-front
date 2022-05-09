@@ -1,0 +1,11 @@
+.tool {
+  background-color: #7F8CAD;
+  height: 30px;
+  text-align: right;
+  color: #FFFFFF;
+}
+.tool div {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=tool.css.map */
