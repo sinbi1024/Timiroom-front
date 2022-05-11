@@ -10,5 +10,11 @@ export default defineComponent({
 </script>
 
 <template>
-  <h1>개요</h1>
+  <hr>
+  <div class="sumTitle">스마트 팩토리란?</div>
+  <div class="sumContext">
+    아무튼 스마트 팩토리가 뭐냐면요<br>
+    되게 멋집니다<br>
+    우와~
+  </div>
 </template>

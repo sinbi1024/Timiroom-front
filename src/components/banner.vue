@@ -23,8 +23,8 @@ export default defineComponent({
         <img class="banner" src="../../public/assets/image/banner1.png">
       </div>
       <div class="user-text">
-        <span class="innerText">스마트 팩토리</span><br>
-        <span class="innerSubText">스마트 팩토리에 대한 멋진 내용</span>
+        <span class="innerText">SMART FACTORY</span><br>
+        <span class="innerSubText">미래 제조 혁신, 스마트 팩토리</span>
       </div>
     </div>
   </section>

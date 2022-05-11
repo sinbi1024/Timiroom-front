@@ -15,7 +15,7 @@
 
 .user-text {
   position: absolute;
-  top: 25%;
+  top: 28%;
   left: 10%;
   color: white;
   text-shadow: 0px 0px 6px #7F8CAD;
@@ -25,6 +25,10 @@
 
   @include fw {
     font-size: 40px;
+  }
+
+  @include sw {
+    font-size: 30px;
   }
 
   @include se {
@@ -37,6 +41,10 @@
 
     @include fw {
       font-size: 15px;
+    }
+
+    @include sw {
+      font-size: 10px;
     }
 
     @include se {

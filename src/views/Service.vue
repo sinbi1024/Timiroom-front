@@ -1,16 +1,18 @@
 <script lang="ts">
-import { defineComponent } from "vue";
+import {defineComponent} from "vue";
 
 export default defineComponent({
   setup() {
 
-    return {
-
-    }
+    return {}
   }
 })
 </script>
 
 <template>
-  <h1>서비스</h1>
+  <div class="serTitle">
+    <div class="serSubTitle">Techniques of Our</div>
+    <div class="serSubTitle">Management System</div>
+  </div>
+  <div class="serContext"></div>
 </template>

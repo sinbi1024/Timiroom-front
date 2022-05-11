@@ -128,7 +128,7 @@ body {
   justify-content: flex-end;
   padding: 8px;
   font-family: sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   color: white;
   cursor: pointer;
 }
@@ -150,7 +150,7 @@ body {
 
 .user-text {
   position: absolute;
-  top: 25%;
+  top: 28%;
   left: 10%;
   color: white;
   text-shadow: 0px 0px 6px #7F8CAD;
@@ -161,6 +161,12 @@ body {
 @media (max-width: 700px) {
   .user-text {
     font-size: 40px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .user-text {
+    font-size: 30px;
     transition: 1s;
   }
 }
@@ -180,11 +186,32 @@ body {
     transition: 1s;
   }
 }
+@media (max-width: 520px) {
+  .user-text .innerSubText {
+    font-size: 10px;
+    transition: 1s;
+  }
+}
 @media (max-width: 375px) {
   .user-text .innerSubText {
     font-size: 5px;
     transition: 1s;
   }
+}
+
+.sumTitle {
+  margin-left: 350px;
+  margin-top: 110px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #7F8CAD;
+}
+
+.sumContext {
+  margin-left: 350px;
+  margin-top: 30px;
+  font-size: 30px;
+  color: #525F7E;
 }
 
 /*# sourceMappingURL=index.css.map */
