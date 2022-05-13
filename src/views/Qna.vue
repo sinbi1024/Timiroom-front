@@ -13,7 +13,8 @@ export default defineComponent({
 
 <template>
   <section>
-    문의하십시오.
+    <hr>
+    게시판 형식으로 만들고 싶어요.
   </section>
 </template>
 

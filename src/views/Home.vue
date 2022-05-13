@@ -27,5 +27,6 @@ export default defineComponent({
         <span class="innerSubText">미래 제조 혁신, 스마트 팩토리</span>
       </div>
     </div>
+    메인 페이지에는 다른 어떤 구성이 추가되어야 할까요?
   </section>
 </template>

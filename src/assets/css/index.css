@@ -24,6 +24,10 @@ body {
   margin: 0 auto;
 }
 
+hr {
+  margin: 0px;
+}
+
 .menu {
   position: relative;
   height: 110px;
@@ -199,19 +203,107 @@ body {
   }
 }
 
+.sum-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.sum-context-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
 .sumTitle {
-  margin-left: 350px;
-  margin-top: 110px;
-  font-size: 40px;
+  margin-left: 30px;
+  margin-top: 130px;
+  font-size: 36px;
   font-weight: bold;
   color: #7F8CAD;
 }
+@media (max-width: 700px) {
+  .sumTitle {
+    margin-top: 110px;
+    font-size: 32px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .sumTitle {
+    margin-left: 20px;
+    margin-top: 80px;
+    font-size: 24px;
+    transition: 1s;
+  }
+}
+@media (max-width: 375px) {
+  .sumTitle {
+    margin-top: 50px;
+    font-size: 18px;
+    transition: 1s;
+  }
+}
 
 .sumContext {
-  margin-left: 350px;
-  margin-top: 30px;
-  font-size: 30px;
+  font-size: 24px;
+  margin-left: 30px;
+  margin-top: 20px;
   color: #525F7E;
+}
+@media (max-width: 700px) {
+  .sumContext {
+    font-size: 20px;
+    margin-top: 18px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .sumContext {
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 10px;
+    transition: 1s;
+  }
+}
+@media (max-width: 375px) {
+  .sumContext {
+    font-size: 5px;
+    margin-top: 5px;
+    transition: 1s;
+  }
+}
+
+.sample {
+  margin-left: 150px;
+  margin-top: 120px;
+  width: 250px;
+  height: 250px;
+}
+@media (max-width: 700px) {
+  .sample {
+    margin-top: 100px;
+    margin-left: 90px;
+    width: 200px;
+    height: 200px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .sample {
+    margin-top: 70px;
+    margin-left: 60px;
+    width: 130px;
+    height: 130px;
+    transition: 1s;
+  }
+}
+@media (max-width: 375px) {
+  .sample {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 90px;
+    height: 90px;
+    transition: 1s;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
