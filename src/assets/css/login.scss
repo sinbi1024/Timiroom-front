@@ -1,0 +1,102 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.loginTitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: #525F7E;
+  margin-bottom: 20px;
+}
+
+.inputEmail {
+  width: 250px;
+  height: 40px;
+}
+
+.inputPassword {
+  width: 250px;
+  height: 40px;
+}
+
+.loginBtn {
+  width: 70px;
+  height: 40px;
+  background-color: #7F8CAD;
+  color: #FFFFFF;
+  opacity: 70%;
+  border: 1px solid #525F7E;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.goJoin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #7F8CAD;
+}
+
+.goLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #7F8CAD;
+}
+
+.join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.joinTitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: #525F7E;
+  margin-bottom: 20px;
+}
+
+.joinName {
+  width: 250px;
+  height: 40px;
+}
+
+.joinEmail {
+  width: 250px;
+  height: 40px;
+}
+
+.joinPhone {
+  width: 250px;
+  height: 40px;
+}
+
+.joinPassword {
+  width: 250px;
+  height: 40px;
+}
+
+.joinAddress {
+  width: 250px;
+  height: 40px;
+}
+
+.joinBtn {
+  width: 70px;
+  height: 40px;
+  background-color: #7F8CAD;
+  color: #FFFFFF;
+  opacity: 70%;
+  border: 1px solid #525F7E;
+  border-radius: 10px;
+  cursor: pointer;
+}

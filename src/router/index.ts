@@ -1,9 +1,4 @@
 import { RouteRecordRaw, createRouter, createWebHashHistory } from "vue-router";
-// import home from "../views/Home.vue";
-// import summ from "../views/Summary.vue";
-// import service from "../views/Service.vue";
-// import tech from "../views/Tech.vue";
-// import qna from "../views/Qna.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -31,6 +26,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/qna",
     name: "QnA",
     component: () => import("../views/Qna.vue"),
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import("../views/Login.vue"),
   },
 ];
 
