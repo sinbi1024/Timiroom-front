@@ -27,4 +27,21 @@
     font-size: 13px;
     cursor: pointer;
   }
+
+  .if-admin {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .admin-page {
+    padding: 8px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .user-logout {
+    padding: 8px;
+    font-size: 13px;
+    cursor: pointer;
+  }
 }

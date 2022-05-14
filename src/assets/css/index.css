@@ -144,6 +144,20 @@ hr {
   font-size: 13px;
   cursor: pointer;
 }
+.tool .if-admin {
+  display: flex;
+  flex-direction: row;
+}
+.tool .admin-page {
+  padding: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.tool .user-logout {
+  padding: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
 
 .user-img {
   position: relative;

@@ -3,6 +3,11 @@ import { RouteRecordRaw, createRouter, createWebHashHistory } from "vue-router";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
+    name: "Home",
+    component: () => import("../views/Home.vue"),
+  },
+  {
+    path: "/main",
     name: "Main",
     component: () => import("../views/Home.vue"),
   },
@@ -31,6 +36,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/login",
     name: "Login",
     component: () => import("../views/Login.vue"),
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: () => import("../views/Admin.vue"),
   },
 ];
 

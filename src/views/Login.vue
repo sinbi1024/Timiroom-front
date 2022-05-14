@@ -16,11 +16,13 @@ export default defineComponent({
     const joinInput = ref<joinInfo>({
       userName: '',
       userEmail: '',
-      userType: 'STU',
+      userType: '',
       userPhone: '',
       userPassword: '',
       userAddress: '',
     });
+
+    let date = new Date();
 
     const joinMode = ref(false);
 
@@ -41,21 +43,22 @@ export default defineComponent({
         return false;
       }
 
-      const url = "http://172.31.15.215:4000/api/users/login";
+      const url = "http://localhost:4000/api/users/login";
 
       axios
           .post(url, userInput)
           .then((res) => {
             if (res.data.resultCode == 0) {
-              window.alert("로그인에 성공했습니다.");
-              router.replace('/');
+              window.alert("로그인 성공");
+              setUserInfo(res.data.data[0]);
+              window.location.replace('/main');
             } else {
-              window.alert("다시 시도하세요.");
+              window.alert("로그인 실패");
               return 1;
             }
           })
           .catch((e) => {
-            throw e;
+            console.error(e);
           })
     }
 
@@ -64,14 +67,14 @@ export default defineComponent({
         return false;
       }
 
-      const url = "http://172.31.15.215:4000/api/users/join";
+      const url = "http://localhost:4000/api/users/join";
 
       axios
           .post(url, joinInput)
           .then((res) => {
             if (res.data.resultCode == 0) {
-              window.alert("회원가입이 완료되었습니다.");
-              router.replace('/login');
+              window.alert("회원가입 성공");
+              window.location.replace('/#/login');
             }
           })
           .catch((e) => {
@@ -79,7 +82,12 @@ export default defineComponent({
           })
     }
 
-    const chanegeJoinMode = () => {
+    const setUserInfo = (userInput: userInfo) => {
+      let inputInfo = JSON.stringify(userInput);
+      localStorage.setItem('userInput', inputInfo);
+    }
+
+    const changeJoinMode = () => {
       joinMode.value = !joinMode.value;
     }
 
@@ -89,7 +97,7 @@ export default defineComponent({
       login,
       join,
       checkInput,
-      chanegeJoinMode,
+      changeJoinMode,
       joinMode,
     }
   },
@@ -113,11 +121,16 @@ export default defineComponent({
       <input type="text" v-model="joinInput.userPhone" class="joinPhone" placeholder="전화번호"><br>
       <input type="password" v-model="joinInput.userPassword" class="joinPassword" placeholder="비밀번호"><br>
       <input type="text" v-model="joinInput.userAddress" class="joinAddress" placeholder="주소"><br>
+      <div class="userType">
+        관리자 <input type="radio" v-model="joinInput.userType" class="joinType" value="STU">
+        일반 사용자 <input type="radio" v-model="joinInput.userType" class="joinType" value="USER">
+      </div>
+      <br>
       <input type="submit" class="joinBtn" @click="join(joinInput)" value="가입하기">
     </div>
 
-    <div class="goJoin" @click="chanegeJoinMode()" v-if="!joinMode">회원가입으로 이동</div>
-    <div class="goLogin" @click="chanegeJoinMode()" v-if="joinMode">로그인으로 이동</div>
+    <div class="goJoin" @click="changeJoinMode()" v-if="!joinMode">회원가입으로 이동</div>
+    <div class="goLogin" @click="changeJoinMode()" v-if="joinMode">로그인으로 이동</div>
   </section>
 </template>
 
