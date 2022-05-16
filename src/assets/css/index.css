@@ -82,34 +82,34 @@ hr {
   }
 }
 
-.menuText {
+.menu-text {
   display: flex;
   justify-content: flex-end;
   color: #7F8CAD;
   font-size: 30px;
   font-weight: bold;
 }
-.menuText div {
+.menu-text div {
   margin-top: 40px;
   margin-right: 38px;
   cursor: pointer;
 }
 @media (max-width: 700px) {
-  .menuText div {
+  .menu-text div {
     font-size: 20px;
     margin-right: 20px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  .menuText div {
+  .menu-text div {
     font-size: 14px;
     margin-right: 17px;
     transition: 1s;
   }
 }
 @media (max-width: 375px) {
-  .menuText div {
+  .menu-text div {
     font-size: 13px;
     margin-top: 22px;
     margin-right: 15px;
@@ -153,179 +153,134 @@ hr {
   font-size: 13px;
   cursor: pointer;
 }
+.tool .if-user {
+  display: flex;
+  flex-direction: row;
+}
+.tool .my-page {
+  padding: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
 .tool .user-logout {
   padding: 8px;
   font-size: 13px;
   cursor: pointer;
 }
 
-.user-img {
-  position: relative;
-  display: flex;
-}
-
-.banner {
-  opacity: 0.7;
-  width: 100%;
-  height: 100%;
-}
-
 .user-wrap {
   position: relative;
+  height: 700px;
 }
-
-.user-text {
+.user-wrap .user-img-banner1 {
+  background-image: url("public/assets/image/banner1.png");
+  background-size: 100%;
+  opacity: 70%;
   position: absolute;
-  top: 28%;
-  left: 10%;
-  color: white;
-  text-shadow: 0px 0px 6px #7F8CAD;
-  font-size: 70px;
-  font-weight: bold;
-  font-family: "Yeongdo-Rg";
+  top: 0;
+  height: 100%;
+  max-height: 700px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+.user-wrap .user-img-banner2 {
+  background-image: url("public/assets/image/banner2.png");
+  background-size: 100%;
+  opacity: 70%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  max-height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+.user-wrap .user-text {
+  position: absolute;
+  font-family: Yeongdo-Rg;
+  top: 190px;
+  left: 80px;
+  text-shadow: 2px 0px 6px #525F7E;
 }
 @media (max-width: 700px) {
-  .user-text {
-    font-size: 40px;
+  .user-wrap .user-text {
+    top: 120px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  .user-text {
+  .user-wrap .user-text {
+    top: 90px;
+    transition: 1s;
+  }
+}
+@media (max-width: 375px) {
+  .user-wrap .user-text {
+    top: 60px;
+    left: 50px;
+    transition: 1s;
+  }
+}
+.user-wrap .user-text .inner-text {
+  font-size: 90px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+@media (max-width: 700px) {
+  .user-wrap .user-text .inner-text {
+    font-size: 75px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .user-wrap .user-text .inner-text {
+    font-size: 50px;
+    transition: 1s;
+  }
+}
+@media (max-width: 375px) {
+  .user-wrap .user-text .inner-text {
     font-size: 30px;
     transition: 1s;
   }
 }
-@media (max-width: 375px) {
-  .user-text {
-    font-size: 20px;
-    transition: 1s;
-  }
-}
-.user-text .innerSubText {
-  position: absolute;
-  font-size: 25px;
+.user-wrap .user-text .inner-sub-text {
+  font-size: 45px;
+  font-weight: bold;
+  color: #FFFFFF;
 }
 @media (max-width: 700px) {
-  .user-text .innerSubText {
-    font-size: 15px;
+  .user-wrap .user-text .inner-sub-text {
+    font-size: 30px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  .user-text .innerSubText {
+  .user-wrap .user-text .inner-sub-text {
+    font-size: 20px;
+    transition: 1s;
+  }
+}
+@media (max-width: 375px) {
+  .user-wrap .user-text .inner-sub-text {
     font-size: 10px;
     transition: 1s;
   }
 }
-@media (max-width: 375px) {
-  .user-text .innerSubText {
-    font-size: 5px;
-    transition: 1s;
-  }
-}
 
-.sum-wrap {
-  display: flex;
-  flex-direction: row;
-}
-
-.sum-context-wrap {
+.summary-context {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin: 100px 100px;
 }
-
-.sumTitle {
-  margin-left: 30px;
-  margin-top: 130px;
-  font-size: 36px;
-  font-weight: bold;
-  color: #7F8CAD;
+.summary-context .summary-title {
+  font-size: 42px;
+  margin-bottom: 70px;
 }
-@media (max-width: 700px) {
-  .sumTitle {
-    margin-top: 110px;
-    font-size: 32px;
-    transition: 1s;
-  }
-}
-@media (max-width: 520px) {
-  .sumTitle {
-    margin-left: 20px;
-    margin-top: 80px;
-    font-size: 24px;
-    transition: 1s;
-  }
-}
-@media (max-width: 375px) {
-  .sumTitle {
-    margin-top: 50px;
-    font-size: 18px;
-    transition: 1s;
-  }
-}
-
-.sumContext {
-  font-size: 24px;
-  margin-left: 30px;
-  margin-top: 20px;
-  color: #525F7E;
-}
-@media (max-width: 700px) {
-  .sumContext {
-    font-size: 20px;
-    margin-top: 18px;
-    transition: 1s;
-  }
-}
-@media (max-width: 520px) {
-  .sumContext {
-    font-size: 12px;
-    margin-left: 20px;
-    margin-top: 10px;
-    transition: 1s;
-  }
-}
-@media (max-width: 375px) {
-  .sumContext {
-    font-size: 5px;
-    margin-top: 5px;
-    transition: 1s;
-  }
-}
-
-.sample {
-  margin-left: 150px;
-  margin-top: 120px;
-  width: 250px;
-  height: 250px;
-}
-@media (max-width: 700px) {
-  .sample {
-    margin-top: 100px;
-    margin-left: 90px;
-    width: 200px;
-    height: 200px;
-    transition: 1s;
-  }
-}
-@media (max-width: 520px) {
-  .sample {
-    margin-top: 70px;
-    margin-left: 60px;
-    width: 130px;
-    height: 130px;
-    transition: 1s;
-  }
-}
-@media (max-width: 375px) {
-  .sample {
-    margin-top: 50px;
-    margin-left: 50px;
-    width: 90px;
-    height: 90px;
-    transition: 1s;
-  }
+.summary-context .smf-sum {
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 .login {
@@ -335,24 +290,24 @@ hr {
   margin-top: 150px;
 }
 
-.loginTitle {
+.login-title {
   font-size: 32px;
   font-weight: bold;
   color: #525F7E;
   margin-bottom: 20px;
 }
 
-.inputEmail {
+.input-email {
   width: 250px;
   height: 40px;
 }
 
-.inputPassword {
+.input-password {
   width: 250px;
   height: 40px;
 }
 
-.loginBtn {
+.login-btn {
   width: 70px;
   height: 40px;
   background-color: #7F8CAD;
@@ -363,20 +318,22 @@ hr {
   cursor: pointer;
 }
 
-.goJoin {
+.go-join {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
+  margin-bottom: 100px;
   cursor: pointer;
   color: #7F8CAD;
 }
 
-.goLogin {
+.go-login {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
+  margin-bottom: 100px;
   cursor: pointer;
   color: #7F8CAD;
 }
@@ -388,39 +345,39 @@ hr {
   margin-top: 80px;
 }
 
-.joinTitle {
+.join-title {
   font-size: 32px;
   font-weight: bold;
   color: #525F7E;
   margin-bottom: 20px;
 }
 
-.joinName {
+.join-name {
   width: 250px;
   height: 40px;
 }
 
-.joinEmail {
+.join-email {
   width: 250px;
   height: 40px;
 }
 
-.joinPhone {
+.join-phone {
   width: 250px;
   height: 40px;
 }
 
-.joinPassword {
+.join-password {
   width: 250px;
   height: 40px;
 }
 
-.joinAddress {
+.join-address {
   width: 250px;
   height: 40px;
 }
 
-.joinBtn {
+.join-btn {
   width: 70px;
   height: 40px;
   background-color: #7F8CAD;

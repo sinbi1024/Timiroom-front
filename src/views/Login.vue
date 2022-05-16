@@ -10,7 +10,6 @@ export default defineComponent({
     const userInput = ref<userInfo>({
       userEmail: '',
       userPassword: '',
-      userType: 'STU',
     });
 
     const joinInput = ref<joinInfo>({
@@ -20,6 +19,7 @@ export default defineComponent({
       userPhone: '',
       userPassword: '',
       userAddress: '',
+      loginUser: "SINBI",
     });
 
     let date = new Date();
@@ -31,7 +31,7 @@ export default defineComponent({
       for (let i = 0; i < checkList.length; i++) {
         if (form[checkList[i]] !== '' && form[checkList[i]] !== 'undefined' && form[checkList[i]] !== null) {
         } else {
-          window.alert('값을 입력해 주세묘.');
+          window.alert('값을 입력해 주세요.');
           return false;
         }
       }
@@ -48,11 +48,12 @@ export default defineComponent({
       axios
           .post(url, userInput)
           .then((res) => {
-            if (res.data.resultCode == 0) {
+            if (res.data.resultCode === 0) {
               window.alert("로그인 성공");
               setUserInfo(res.data.data[0]);
               window.location.replace('/main');
             } else {
+              console.log(res.data.data[0]);
               window.alert("로그인 실패");
               return 1;
             }
@@ -72,9 +73,9 @@ export default defineComponent({
       axios
           .post(url, joinInput)
           .then((res) => {
-            if (res.data.resultCode == 0) {
+            if (res.data.resultCode === 0) {
               window.alert("회원가입 성공");
-              window.location.replace('/#/login');
+              joinMode.value = false;
             }
           })
           .catch((e) => {
@@ -108,29 +109,29 @@ export default defineComponent({
 <template>
   <section>
     <div class="login" v-if="!joinMode">
-      <div class="loginTitle">로그인</div>
-      <input type="text" v-model="userInput.userEmail" class="inputEmail" placeholder="이메일"><br>
-      <input type="password" v-model="userInput.userPassword" class="inputPassword" placeholder="비밀번호"><br>
-      <input type="submit" class="loginBtn" @click="login(userInput)" value="로그인">
+      <div class="login-title">로그인</div>
+      <input type="text" v-model="userInput.userEmail" class="input-email" placeholder="이메일"><br>
+      <input type="password" v-model="userInput.userPassword" class="input-password" placeholder="비밀번호"><br>
+      <input type="submit" class="login-btn" @click="login(userInput)" value="로그인">
     </div>
 
     <div class="join" v-if="joinMode">
-      <div class="joinTitle">회원가입</div>
-      <input type="text" v-model="joinInput.userName" class="joinName" placeholder="이름"><br>
-      <input type="text" v-model="joinInput.userEmail" class="joinEmail" placeholder="이메일"><br>
-      <input type="text" v-model="joinInput.userPhone" class="joinPhone" placeholder="전화번호"><br>
-      <input type="password" v-model="joinInput.userPassword" class="joinPassword" placeholder="비밀번호"><br>
-      <input type="text" v-model="joinInput.userAddress" class="joinAddress" placeholder="주소"><br>
-      <div class="userType">
-        관리자 <input type="radio" v-model="joinInput.userType" class="joinType" value="STU">
-        일반 사용자 <input type="radio" v-model="joinInput.userType" class="joinType" value="USER">
+      <div class="join-title">회원가입</div>
+      <input type="text" v-model="joinInput.userName" class="join-name" placeholder="이름"><br>
+      <input type="text" v-model="joinInput.userEmail" class="join-email" placeholder="이메일"><br>
+      <input type="text" v-model="joinInput.userPhone" class="join-phone" placeholder="전화번호"><br>
+      <input type="password" v-model="joinInput.userPassword" class="join-password" placeholder="비밀번호"><br>
+      <input type="text" v-model="joinInput.userAddress" class="join-address" placeholder="주소"><br>
+      <div class="user-type">
+        관리자 <input type="radio" v-model="joinInput.userType" class="join-type" value="ADM">
+        일반 사용자 <input type="radio" v-model="joinInput.userType" class="join-type" value="USER">
       </div>
       <br>
-      <input type="submit" class="joinBtn" @click="join(joinInput)" value="가입하기">
+      <input type="submit" class="join-btn" @click="join(joinInput)" value="가입하기">
     </div>
 
-    <div class="goJoin" @click="changeJoinMode()" v-if="!joinMode">회원가입으로 이동</div>
-    <div class="goLogin" @click="changeJoinMode()" v-if="joinMode">로그인으로 이동</div>
+    <div class="go-join" @click="changeJoinMode()" v-if="!joinMode">회원가입으로 이동</div>
+    <div class="go-login" @click="changeJoinMode()" v-if="joinMode">로그인으로 이동</div>
   </section>
 </template>
 

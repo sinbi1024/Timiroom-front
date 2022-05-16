@@ -39,6 +39,17 @@
     cursor: pointer;
   }
 
+  .if-user {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .my-page {
+    padding: 8px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
   .user-logout {
     padding: 8px;
     font-size: 13px;

@@ -1,14 +1,14 @@
 export interface userInfo {
-  userEmail: String;
-  userPassword: String;
-  userType: String;
+  userEmail: string;
+  userPassword: string;
 }
 
 export interface joinInfo {
-  userName: String;
-  userEmail: String;
-  userType: String;
-  userPhone: String;
-  userPassword: String;
-  userAddress: String;
+  userName: string;
+  userEmail: string;
+  userType: string;
+  userPhone: string;
+  userPassword: string;
+  userAddress: string;
+  loginUser: "SINBI" | undefined | null;
 }
