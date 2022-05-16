@@ -1,1 +1,0 @@
-import{_ as e,d as n,c as u,o as t}from"./index.2457ff92.js";const o=n({name:"PageInit",setup(){return{}}});function r(a,s,c,C,p,_){return t(),u("section",null," \uAD00\uB9AC\uC790 \uD398\uC774\uC9C0\uB97C \uC5B4\uCA4C\uB2E4 \uB0B4\uAC00. ")}var B=e(o,[["render",r]]);export{B as default};
