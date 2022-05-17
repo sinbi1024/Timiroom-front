@@ -16,8 +16,20 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "SuseongDotum";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 #app {
-  font-family: "NanumSquareRound";
+  font-family: "GmarketSansMedium";
 }
 
 body {
@@ -170,7 +182,7 @@ hr {
 
 .user-wrap {
   position: relative;
-  height: 700px;
+  height: 740px;
 }
 .user-wrap .user-img-banner1 {
   background-image: url("public/assets/image/banner1.png");
@@ -190,7 +202,7 @@ hr {
   position: absolute;
   top: 0;
   height: 100%;
-  max-height: 600px;
+  max-height: 650px;
   width: 100%;
   background-repeat: no-repeat;
 }
@@ -221,19 +233,19 @@ hr {
   }
 }
 .user-wrap .user-text .inner-text {
-  font-size: 90px;
+  font-size: 80px;
   font-weight: bold;
   color: #FFFFFF;
 }
 @media (max-width: 700px) {
   .user-wrap .user-text .inner-text {
-    font-size: 75px;
+    font-size: 60px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
   .user-wrap .user-text .inner-text {
-    font-size: 50px;
+    font-size: 40px;
     transition: 1s;
   }
 }
@@ -244,7 +256,7 @@ hr {
   }
 }
 .user-wrap .user-text .inner-sub-text {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: bold;
   color: #FFFFFF;
 }
@@ -267,20 +279,53 @@ hr {
   }
 }
 
-.summary-context {
+.summary .summary-context {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-content: center;
-  margin: 100px 100px;
+  margin: 0px 120px;
 }
-.summary-context .summary-title {
-  font-size: 42px;
-  margin-bottom: 70px;
+.summary .summary-context .sub-title {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
 }
-.summary-context .smf-sum {
+.summary .summary-context .sub-title .icon {
+  width: 30px;
+  height: 30px;
+}
+.summary .summary-context .sub-title .summary-sub-title {
+  font-family: "SuseongDotum";
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  color: #273552;
+}
+.summary .summary-context .summary-title {
+  font-family: "SuseongDotum";
+  font-size: 50px;
+  margin-bottom: 50px;
+  color: #7F8CAD;
+  text-shadow: 1px 1px 0px #273552;
+}
+.summary .summary-context .smf-sum {
   font-size: 20px;
   line-height: 1.4;
+  margin-bottom: 70px;
+  color: #525F7E;
+}
+.summary .summary-context .smf-sum b {
+  font-size: 24px;
+  font-weight: bold;
+  color: #273552;
+}
+.summary .summary-context .problems-sec {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+.summary .summary-context .problems-sec .problems {
+  width: 90%;
 }
 
 .login {

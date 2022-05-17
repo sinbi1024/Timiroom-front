@@ -1,17 +1,59 @@
-.summary-context {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  margin: 100px 100px;
+.summary {
 
-  .summary-title {
-    font-size: 42px;
-    margin-bottom: 70px;
-  }
+  .summary-context {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 120px;
 
-  .smf-sum {
-    font-size: 20px;
-    line-height: 1.4;
+    .sub-title {
+      display: flex;
+      flex-direction: row;
+      margin-top: 100px;
+
+      .icon {
+        width: 30px;
+        height: 30px;
+      }
+
+      .summary-sub-title {
+        font-family: 'SuseongDotum';
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        color: $third-color;
+      }
+    }
+
+    .summary-title {
+      font-family: 'SuseongDotum';
+      font-size: 50px;
+      margin-bottom: 50px;
+      color: $second-color;
+      text-shadow: 1px 1px 0px $third-color;
+    }
+
+    .smf-sum {
+      font-size: 20px;
+      line-height: 1.4;
+      margin-bottom: 70px;
+      color: $first-color;
+
+      b {
+        font-size: 24px;
+        font-weight: bold;
+        color: $third-color;
+      }
+    }
+
+    .problems-sec {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 70px;
+
+      .problems {
+        width: 90%;
+      }
+    }
   }
 }
