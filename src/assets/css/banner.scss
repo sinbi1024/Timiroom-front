@@ -3,7 +3,7 @@
   height: 740px;
 
   .user-img {
-    &-banner1 {
+    &-main {
       background-image: url("public/assets/image/banner1.png");
       background-size: 100%;
       opacity: 70%;
@@ -15,8 +15,32 @@
       background-repeat: no-repeat;
     }
 
-    &-banner2 {
-      background-image: url("public/assets/image/banner2.png");
+    &-summary {
+      background-image: url("public/assets/image/banner3.png");
+      background-size: 100%;
+      opacity: 70%;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      max-height: 650px;
+      width: 100%;
+      background-repeat: no-repeat;
+    }
+
+    &-service {
+      background-image: url("public/assets/image/banner3.png");
+      background-size: 100%;
+      opacity: 70%;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      max-height: 650px;
+      width: 100%;
+      background-repeat: no-repeat;
+    }
+
+    &-tech {
+      background-image: url("public/assets/image/banner3.png");
       background-size: 100%;
       opacity: 70%;
       position: absolute;

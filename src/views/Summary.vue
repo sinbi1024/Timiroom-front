@@ -12,7 +12,7 @@ export default defineComponent({
 <template>
   <section class="summary">
     <div class="user-wrap">
-      <div class="user-img-banner2">
+      <div class="user-img-summary">
       </div>
       <div class="user-text">
         <span class="inner-text">The New Factory</span><br>
@@ -23,7 +23,8 @@ export default defineComponent({
 
     <div class="summary-context">
       <div class="sub-title">
-        <img class="icon" src="../../public/assets/image/idea.png">
+        <div class="icon">
+        </div>
         <div class="summary-sub-title">
           First. Smart Factory
         </div>
@@ -42,7 +43,8 @@ export default defineComponent({
       </div>
 
       <div class="sub-title">
-        <img class="icon" src="../../public/assets/image/idea.png">
+        <div class="icon">
+        </div>
         <div class="summary-sub-title">
           Second. Problems
         </div>
@@ -57,9 +59,10 @@ export default defineComponent({
       </div>
 
       <div class="sub-title">
-        <img class="icon" src="../../public/assets/image/idea.png">
+        <div class="icon">
+        </div>
         <div class="summary-sub-title">
-          Second. Management System
+          Third. Management System
         </div>
       </div>
 

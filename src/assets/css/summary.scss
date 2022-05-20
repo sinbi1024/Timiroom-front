@@ -3,14 +3,16 @@
   .summary-context {
     display: flex;
     flex-direction: column;
-    margin: 0px 120px;
+    margin: 0px 200px;
 
     .sub-title {
       display: flex;
       flex-direction: row;
-      margin-top: 100px;
+      //margin-top: 70px;
 
       .icon {
+        background-image: url("public/assets/image/idea.png");
+        background-size: 100%;
         width: 30px;
         height: 30px;
       }
@@ -28,7 +30,7 @@
     .summary-title {
       font-family: 'SuseongDotum';
       font-size: 50px;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       color: $second-color;
       text-shadow: 1px 1px 0px $third-color;
     }
@@ -36,7 +38,7 @@
     .smf-sum {
       font-size: 20px;
       line-height: 1.4;
-      margin-bottom: 70px;
+      margin-bottom: 150px;
       color: $first-color;
 
       b {
@@ -49,7 +51,7 @@
     .problems-sec {
       display: flex;
       justify-content: center;
-      margin-bottom: 70px;
+      margin-bottom: 100px;
 
       .problems {
         width: 90%;
