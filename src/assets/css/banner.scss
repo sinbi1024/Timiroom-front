@@ -1,6 +1,18 @@
 .user-wrap {
   position: relative;
-  height: 740px;
+  height: 620px;
+
+  @include fw {
+    height: 370px;
+  }
+
+  @include sw {
+    height: 270px;
+  }
+
+  @include se {
+    height: 195px;
+  }
 
   .user-img {
     &-main {

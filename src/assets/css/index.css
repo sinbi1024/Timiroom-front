@@ -36,8 +36,10 @@ body {
   margin: 0 auto;
 }
 
-hr {
-  margin: 0px;
+b {
+  font-size: 24px;
+  font-weight: bold;
+  color: #273552;
 }
 
 .menu {
@@ -182,7 +184,25 @@ hr {
 
 .user-wrap {
   position: relative;
-  height: 740px;
+  height: 620px;
+}
+@media (max-width: 700px) {
+  .user-wrap {
+    height: 370px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .user-wrap {
+    height: 270px;
+    transition: 1s;
+  }
+}
+@media (max-width: 375px) {
+  .user-wrap {
+    height: 195px;
+    transition: 1s;
+  }
 }
 .user-wrap .user-img-main {
   background-image: url("public/assets/image/banner1.png");
@@ -301,6 +321,25 @@ hr {
   }
 }
 
+.main > section .main-card {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.main > section .main-card .main-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #273552;
+}
+.main > section .main-card .main-context {
+  text-align: center;
+  font-size: 20px;
+  margin: 30px 0px;
+  color: #525F7E;
+}
+
 .login {
   display: flex;
   flex-direction: column;
@@ -416,7 +455,7 @@ hr {
   flex-direction: row;
 }
 .summary .summary-context .sub-title .icon {
-  background-image: url("public/assets/image/idea.png");
+  background-image: url("public/assets/image/icon.png");
   background-size: 100%;
   width: 30px;
   height: 30px;
@@ -442,11 +481,6 @@ hr {
   margin-bottom: 150px;
   color: #525F7E;
 }
-.summary .summary-context .smf-sum b {
-  font-size: 24px;
-  font-weight: bold;
-  color: #273552;
-}
 .summary .summary-context .problems-sec {
   display: flex;
   justify-content: center;
@@ -456,54 +490,136 @@ hr {
   width: 90%;
 }
 
-.service-card {
+.service > section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 80px 20px;
-  background-color: #fafafa;
+  justify-content: center;
 }
-.service-card .monitoring-of-product {
+.service > section .service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1000px;
+  margin: 50px 20px;
+  border-radius: 50px;
+  background-color: #fafafa;
+  box-shadow: 2px 2px 2px #e3e3e3;
+}
+@media (max-width: 700px) {
+  .service > section .service-card {
+    width: 600px;
+    margin: 30px 20px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .service > section .service-card {
+    width: 500px;
+    transition: 1s;
+  }
+}
+@media (max-width: 375px) {
+  .service > section .service-card {
+    width: 350px;
+    transition: 1s;
+  }
+}
+.service > section .service-card .monitoring-of-product {
   content: url("public/assets/image/product.png");
   box-shadow: 0px 0px 6px #273552;
   margin: 30px 0px;
 }
-.service-card .monitoring-of-progress {
+@media (max-width: 700px) {
+  .service > section .service-card .monitoring-of-product {
+    width: 70%;
+    transition: 1s;
+  }
+}
+.service > section .service-card .monitoring-of-progress {
   content: url("public/assets/image/progress.png");
   box-shadow: 0px 0px 6px #273552;
   margin: 30px 0px;
 }
-.service-card .monitoring-of-target {
+@media (max-width: 700px) {
+  .service > section .service-card .monitoring-of-progress {
+    width: 70%;
+    transition: 1s;
+  }
+}
+.service > section .service-card .monitoring-of-target {
   content: url("public/assets/image/target.png");
   box-shadow: 0px 0px 6px #273552;
   margin: 30px 0px;
 }
-.service-card .monitoring-of-environ {
+@media (max-width: 700px) {
+  .service > section .service-card .monitoring-of-target {
+    width: 70%;
+    transition: 1s;
+  }
+}
+.service > section .service-card .monitoring-of-environ {
   content: url("public/assets/image/environ.png");
   box-shadow: 0px 0px 6px #273552;
   margin: 30px 0px;
 }
-.service-card .monitoring-of-total {
+@media (max-width: 700px) {
+  .service > section .service-card .monitoring-of-environ {
+    width: 70%;
+    transition: 1s;
+  }
+}
+.service > section .service-card .monitoring-of-total {
   content: url("public/assets/image/total.png");
   box-shadow: 0px 0px 6px #273552;
   margin: 30px 0px;
 }
-.service-card .about {
+@media (max-width: 700px) {
+  .service > section .service-card .monitoring-of-total {
+    width: 70%;
+    transition: 1s;
+  }
+}
+.service > section .service-card .about {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.service-card .about .service-title {
+.service > section .service-card .about .service-title {
   font-size: 35px;
   font-weight: bold;
   color: #273552;
   margin-bottom: 20px;
 }
-.service-card .about .service-context {
+@media (max-width: 700px) {
+  .service > section .service-card .about .service-title {
+    font-size: 30px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .service > section .service-card .about .service-title {
+    font-size: 25px;
+    transition: 1s;
+  }
+}
+.service > section .service-card .service-context {
   text-align: center;
   font-size: 25px;
   color: #7F8CAD;
   margin-bottom: 30px;
+}
+@media (max-width: 700px) {
+  .service > section .service-card .service-context {
+    font-size: 20px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .service > section .service-card .service-context {
+    font-size: 15px;
+    transition: 1s;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

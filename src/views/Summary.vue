@@ -10,7 +10,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="summary">
+  <article class="summary">
     <div class="user-wrap">
       <div class="user-img-summary">
       </div>
@@ -78,5 +78,5 @@ export default defineComponent({
       </div>
 
     </div>
-  </section>
+  </article>
 </template>
