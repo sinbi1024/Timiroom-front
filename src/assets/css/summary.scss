@@ -36,8 +36,6 @@
 
       .icon {
         content: url("public/assets/image/icon.png");
-        //background-size: 100%;
-        //background-repeat: no-repeat;
         width: 30px;
         height: 30px;
 
@@ -53,7 +51,6 @@
       }
 
       .summary-sub-title {
-        font-family: 'SuseongDotum';
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 10px;
@@ -75,10 +72,11 @@
     }
 
     .summary-title {
-      font-family: 'SuseongDotum';
       font-size: 50px;
+      font-weight: bold;
       margin-bottom: 40px;
       color: $second-color;
+      text-shadow: 1px 1px 1px $third-color;
 
       @include fw {
         font-size: 32px;
