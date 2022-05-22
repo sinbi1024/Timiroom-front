@@ -5,6 +5,10 @@
     align-items: center;
     justify-content: center;
 
+    > p {
+      opacity: 50%;
+    }
+
     .service-card {
       display: flex;
       flex-direction: column;

@@ -23,8 +23,7 @@ export default defineComponent({
 
     <div class="summary-context">
       <div class="sub-title">
-        <div class="icon">
-        </div>
+        <img class="icon">
         <div class="summary-sub-title">
           First. Smart Factory
         </div>
@@ -43,8 +42,7 @@ export default defineComponent({
       </div>
 
       <div class="sub-title">
-        <div class="icon">
-        </div>
+        <img class="icon">
         <div class="summary-sub-title">
           Second. Problems
         </div>
@@ -59,8 +57,7 @@ export default defineComponent({
       </div>
 
       <div class="sub-title">
-        <div class="icon">
-        </div>
+        <img class="icon">
         <div class="summary-sub-title">
           Third. Management System
         </div>

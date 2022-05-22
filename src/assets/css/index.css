@@ -41,6 +41,18 @@ b {
   font-weight: bold;
   color: #273552;
 }
+@media (max-width: 700px) {
+  b {
+    font-size: 20px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  b {
+    font-size: 15px;
+    transition: 1s;
+  }
+}
 
 .menu {
   position: relative;
@@ -450,15 +462,65 @@ b {
   flex-direction: column;
   margin: 0px 200px;
 }
+@media (max-width: 700px) {
+  .summary .summary-context {
+    margin: 0px 100px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .summary .summary-context {
+    margin: 0px 50px;
+    transition: 1s;
+  }
+}
+@media (max-width: 375px) {
+  .summary .summary-context {
+    margin: 0px 30px;
+    transition: 1s;
+  }
+}
 .summary .summary-context .sub-title {
   display: flex;
   flex-direction: row;
+  margin-top: 150px;
+}
+@media (max-width: 700px) {
+  .summary .summary-context .sub-title {
+    margin-top: 100px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .summary .summary-context .sub-title {
+    margin-top: 80px;
+    transition: 1s;
+  }
+}
+@media (max-width: 375px) {
+  .summary .summary-context .sub-title {
+    margin-top: 60px;
+    transition: 1s;
+  }
 }
 .summary .summary-context .sub-title .icon {
-  background-image: url("public/assets/image/icon.png");
-  background-size: 100%;
+  content: url("public/assets/image/icon.png");
   width: 30px;
   height: 30px;
+}
+@media (max-width: 700px) {
+  .summary .summary-context .sub-title .icon {
+    width: 20px;
+    height: 20px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .summary .summary-context .sub-title .icon {
+    width: 15px;
+    height: 15px;
+    transition: 1s;
+  }
 }
 .summary .summary-context .sub-title .summary-sub-title {
   font-family: "SuseongDotum";
@@ -468,23 +530,71 @@ b {
   margin-left: 10px;
   color: #273552;
 }
+@media (max-width: 700px) {
+  .summary .summary-context .sub-title .summary-sub-title {
+    font-size: 20px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .summary .summary-context .sub-title .summary-sub-title {
+    font-size: 15px;
+    transition: 1s;
+  }
+}
+@media (max-width: 375px) {
+  .summary .summary-context .sub-title .summary-sub-title {
+    font-size: 13px;
+    transition: 1s;
+  }
+}
 .summary .summary-context .summary-title {
   font-family: "SuseongDotum";
   font-size: 50px;
   margin-bottom: 40px;
   color: #7F8CAD;
-  text-shadow: 1px 1px 0px #273552;
+}
+@media (max-width: 700px) {
+  .summary .summary-context .summary-title {
+    font-size: 32px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .summary .summary-context .summary-title {
+    font-size: 25px;
+    transition: 1s;
+  }
+}
+@media (max-width: 375px) {
+  .summary .summary-context .summary-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    transition: 1s;
+  }
 }
 .summary .summary-context .smf-sum {
   font-size: 20px;
   line-height: 1.4;
-  margin-bottom: 150px;
   color: #525F7E;
+  margin-bottom: 50px;
+}
+@media (max-width: 700px) {
+  .summary .summary-context .smf-sum {
+    font-size: 15px;
+    transition: 1s;
+  }
+}
+@media (max-width: 520px) {
+  .summary .summary-context .smf-sum {
+    font-size: 10px;
+    transition: 1s;
+  }
 }
 .summary .summary-context .problems-sec {
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .summary .summary-context .problems-sec .problems {
   width: 90%;
@@ -495,6 +605,9 @@ b {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.service > section > p {
+  opacity: 50%;
 }
 .service > section .service-card {
   display: flex;

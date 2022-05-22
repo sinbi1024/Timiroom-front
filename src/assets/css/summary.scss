@@ -5,16 +5,51 @@
     flex-direction: column;
     margin: 0px 200px;
 
+    @include fw {
+      margin: 0px 100px;
+    }
+
+    @include sw {
+      margin: 0px 50px;
+    }
+
+    @include se {
+      margin: 0px 30px;
+    }
+
     .sub-title {
       display: flex;
       flex-direction: row;
-      //margin-top: 70px;
+      margin-top: 150px;
+
+      @include fw {
+        margin-top: 100px;
+      }
+
+      @include sw {
+        margin-top: 80px;
+      }
+
+      @include se {
+        margin-top: 60px;
+      }
 
       .icon {
-        background-image: url("public/assets/image/icon.png");
-        background-size: 100%;
+        content: url("public/assets/image/icon.png");
+        //background-size: 100%;
+        //background-repeat: no-repeat;
         width: 30px;
         height: 30px;
+
+        @include fw {
+          width: 20px;
+          height: 20px;
+        }
+
+        @include sw {
+          width: 15px;
+          height: 15px;
+        }
       }
 
       .summary-sub-title {
@@ -24,6 +59,18 @@
         margin-bottom: 10px;
         margin-left: 10px;
         color: $third-color;
+
+        @include fw {
+          font-size: 20px;
+        }
+
+        @include sw {
+          font-size: 15px;
+        }
+
+        @include se {
+          font-size: 13px;
+        }
       }
     }
 
@@ -32,26 +79,40 @@
       font-size: 50px;
       margin-bottom: 40px;
       color: $second-color;
-      text-shadow: 1px 1px 0px $third-color;
+
+      @include fw {
+        font-size: 32px;
+      }
+
+      @include sw {
+        font-size: 25px;
+      }
+
+      @include se {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
     }
 
     .smf-sum {
       font-size: 20px;
       line-height: 1.4;
-      margin-bottom: 150px;
       color: $first-color;
+      margin-bottom: 50px;
 
-      //b {
-      //  font-size: 24px;
-      //  font-weight: bold;
-      //  color: $third-color;
-      //}
+      @include fw {
+        font-size: 15px;
+      }
+
+      @include sw {
+        font-size: 10px;
+      }
     }
 
     .problems-sec {
       display: flex;
       justify-content: center;
-      margin-bottom: 100px;
+      margin-bottom: 50px;
 
       .problems {
         width: 90%;
