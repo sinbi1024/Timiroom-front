@@ -15,7 +15,7 @@ export default defineComponent({
       <div class="user-img-service">
       </div>
       <div class="user-text">
-        <span class="inner-text">Our Service</span><br>
+        <span class="inner-text">Service for Smart Factory</span><br>
         <div class="inner-sub-text">스마트 팩토리에 최적화된 모니터링 시스템을 제공합니다.</div>
       </div>
     </div>

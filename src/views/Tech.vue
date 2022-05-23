@@ -15,8 +15,8 @@ export default defineComponent({
       <div class="user-img-tech">
       </div>
       <div class="user-text">
-        <span class="inner-text">Our Technologies</span><br>
-        <div class="inner-sub-text">봐라 이게 우리 기술이다.</div>
+        <span class="inner-text">Technologies of Our System</span><br>
+        <div class="inner-sub-text">관리자 시스템을 위한 기술은 꾸준히 발전하고 있습니다.</div>
       </div>
     </div>
 

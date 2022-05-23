@@ -221,9 +221,9 @@ b {
   }
 }
 .user-wrap .user-img-main {
-  background-image: url("public/assets/image/banner1.png");
+  background-image: url("public/assets/image/banner-main.png");
   background-size: 100%;
-  opacity: 70%;
+  opacity: 80%;
   position: absolute;
   top: 0;
   height: 100%;
@@ -232,9 +232,9 @@ b {
   background-repeat: no-repeat;
 }
 .user-wrap .user-img-summary {
-  background-image: url("public/assets/image/banner3.png");
+  background-image: url("public/assets/image/banner-summary.jpg");
   background-size: 100%;
-  opacity: 70%;
+  opacity: 80%;
   position: absolute;
   top: 0;
   height: 100%;
@@ -243,9 +243,9 @@ b {
   background-repeat: no-repeat;
 }
 .user-wrap .user-img-service {
-  background-image: url("public/assets/image/banner3.png");
+  background-image: url("public/assets/image/banner-service.jpg");
   background-size: 100%;
-  opacity: 70%;
+  opacity: 80%;
   position: absolute;
   top: 0;
   height: 100%;
@@ -254,9 +254,9 @@ b {
   background-repeat: no-repeat;
 }
 .user-wrap .user-img-tech {
-  background-image: url("public/assets/image/banner3.png");
+  background-image: url("public/assets/image/banner-tech.jpg");
   background-size: 100%;
-  opacity: 70%;
+  opacity: 80%;
   position: absolute;
   top: 0;
   height: 100%;

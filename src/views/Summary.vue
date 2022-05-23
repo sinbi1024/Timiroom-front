@@ -15,8 +15,8 @@ export default defineComponent({
       <div class="user-img-summary">
       </div>
       <div class="user-text">
-        <span class="inner-text">The New Factory</span><br>
-        <div class="inner-sub-text">아름다운 가치를 만들어갑니다.</div>
+        <span class="inner-text">New Things, New Values</span><br>
+        <div class="inner-sub-text">새로운 기술에 발맞춰 새로운 가치를 만들어갑니다.</div>
       </div>
     </div>
 
