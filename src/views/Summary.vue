@@ -20,7 +20,6 @@ export default defineComponent({
       </div>
     </div>
 
-
     <div class="summary-context">
       <div class="sub-title">
         <img class="icon">
@@ -73,7 +72,7 @@ export default defineComponent({
         기계, 설비, 작업자, 작업 현황으로부터 발생하는 정보를 <b>실시간</b>으로 수집, 처리하는 시스템에서<br>
         <b>생산 정보 시스템을 총괄</b>하는 시스템으로 확장될 수 있다.
       </div>
-
     </div>
+    <div class="bottom-margin"></div>
   </article>
 </template>

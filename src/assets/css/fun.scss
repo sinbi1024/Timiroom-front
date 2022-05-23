@@ -26,8 +26,19 @@ $se: 375px; // se2 해상도
   transition: 1s;
 }
 
+//[data-scroll] {
+//  transition: opacity 1s;
+//}
+//[data-scroll="in"] {
+//  opacity: 1;
+//}
+//[data-scroll="out"] {
+//  opacity: 0;
+//}
+
 
 // color 변수 빼놓는 거 따라하기 ㅎㅎ
 $first-color: #525F7E;
 $second-color: #7F8CAD;
 $third-color: #273552;
+$forth-color: #aebbdd;

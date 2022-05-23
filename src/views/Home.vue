@@ -1,39 +1,52 @@
 <script lang="ts">
 import {defineComponent, ref, onMounted, onUnmounted} from "vue";
+// import ScrollOut from "scroll-out";
 
 export default defineComponent({
   name: "PageInit",
   setup() {
-    const addScrollEvent = () => {
-      console.log('keyEventListener On!');
-      window.addEventListener('scroll', eventHandler);
-    }
-
-    const eventHandler = (e) => {
-      const scroll = window.scrollY;
-
-      if (scroll > 360 && scroll <= 497) {
-        console.log(scroll);
-      }
-
-      if (scroll > 1150 && scroll <= 1190) {
-        console.log(scroll);
-      }
-    }
-
-    const removeScrollEvent = () => {
-      console.log('remove evnet!');
-      window.removeEventListener('scroll', eventHandler)
-    }
-
-    onMounted(() => {
-      addScrollEvent()
-    });
-
-    onUnmounted(() => {
-      removeScrollEvent();
-    })
-
+    // ScrollOut({
+    //   onShown: function (el) {
+    //     // use the web animation API
+    //     el.animate([{opacity: 0}, {opacity: 1}], 1000);
+    //   },
+    //   onHidden: function (el) {
+    //     // hide the element initially
+    //     el.style.opacity = 0;
+    //   }
+    // });
+    //
+    // ScrollOut();
+    //
+    // const addScrollEvent = () => {
+    //   console.log('keyEventListener On!');
+    //   window.addEventListener('scroll', eventHandler);
+    // }
+    //
+    // const eventHandler = (e) => {
+    //   const scroll = window.scrollY;
+    //
+    //   if (scroll > 360 && scroll <= 497) {
+    //     console.log(scroll);
+    //   }
+    //
+    //   if (scroll > 1150 && scroll <= 1190) {
+    //     console.log(scroll);
+    //   }
+    // }
+    //
+    // const removeScrollEvent = () => {
+    //   console.log('remove evnet!');
+    //   window.removeEventListener('scroll', eventHandler)
+    // }
+    //
+    // onMounted(() => {
+    //   addScrollEvent()
+    // });
+    //
+    // onUnmounted(() => {
+    //   removeScrollEvent();
+    // })
 
     return {}
   },
@@ -75,6 +88,7 @@ export default defineComponent({
           <b>설비의 장애 예방 및 가동률 관리</b>를 위해 설비에서 발생하는 데이터를 활용하고자 합니다.
         </div>
       </div>
+      <div class="bottom-margin"></div>
     </section>
   </article>
 </template>
