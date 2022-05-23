@@ -16,6 +16,17 @@
           width: 50px;
           height: 50px;
           margin-right: 15px;
+
+          @include fw {
+            width: 40px;
+            height: 40px;
+          }
+
+          @include sw {
+            width: 36px;
+            height: 36px;
+            margin-right: 10px;
+          }
         }
 
         .tech-main-title {
@@ -23,6 +34,14 @@
           font-weight: bold;
           color: $forth-color;
           text-shadow: 1px 1px 1px $third-color;
+
+          @include fw {
+            font-size: 32px;
+          }
+
+          @include sw {
+            font-size: 24px;
+          }
         }
       }
 
@@ -34,8 +53,15 @@
         text-align: center;
         font-size: 25px;
         color: $second-color;
-        margin-left: 50px;
         margin-bottom: 150px;
+
+        @include fw {
+          font-size: 20px;
+        }
+
+        @include sw {
+          font-size: 15px;
+        }
 
         .point {
           &-conveyor {
@@ -43,6 +69,10 @@
             width: 50%;
             height: 50%;
             margin: 60px 0px;
+
+            @include sw {
+              margin: 40px 0px;
+            }
           }
 
           &-web-control {
@@ -50,6 +80,10 @@
             width: 50%;
             height: 50%;
             margin: 60px 0px;
+
+            @include sw {
+              margin: 40px 0px;
+            }
           }
 
           &-data-collect {
@@ -57,6 +91,10 @@
             width: 40%;
             height: 40%;
             margin: 60px 0px;
+
+            @include sw {
+              margin: 40px 0px;
+            }
           }
         }
       }
