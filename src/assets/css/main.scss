@@ -8,12 +8,26 @@
       align-items: center;
       margin-top: 150px;
 
+      @include fw {
+        margin-top: 100px;
+      }
+
       .point {
         &-why-smf {
           content: url("public/assets/image/icon-factory.png");
           width: 250px;
           height: 250px;
           margin: 40px 0px;
+
+          @include fw {
+            width: 200px;
+            height: 200px;
+          }
+
+          @include sw {
+            width: 170px;
+            height: 170px;
+          }
         }
 
         &-what-require {
@@ -21,6 +35,16 @@
           width: 250px;
           height: 250px;
           margin: 40px 0px;
+
+          @include fw {
+            width: 200px;
+            height: 200px;
+          }
+
+          @include sw {
+            width: 170px;
+            height: 170px;
+          }
         }
       }
 
@@ -29,6 +53,14 @@
         font-weight: 900;
         color: $forth-color;
         text-shadow: 1px 1px 1px $third-color;
+
+        @include fw {
+          font-size: 32px;
+        }
+
+        @include sw {
+          font-size: 24px;
+        }
       }
 
       .main-context {
@@ -36,6 +68,20 @@
         font-size: 22px;
         margin-bottom: 50px;
         color: $first-color;
+
+        @include fw {
+          font-size: 20px;
+        }
+
+        @include sw {
+          font-size: 15px;
+          margin-bottom: 30px;
+        }
+
+        @include se {
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
       }
     }
   }

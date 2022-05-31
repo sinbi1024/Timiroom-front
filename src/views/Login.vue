@@ -121,9 +121,9 @@ export default defineComponent({
       <input type="text" v-model="joinInput.userEmail" class="join-email" placeholder="이메일"><br>
       <input type="text" v-model="joinInput.userPhone" class="join-phone" placeholder="전화번호"><br>
       <input type="password" v-model="joinInput.userPassword" class="join-password" placeholder="비밀번호"><br>
-      <input type="text" v-model="joinInput.userAddress" class="join-address" placeholder="주소"><br>
+      <!--      <input type="text" v-model="joinInput.userAddress" class="join-address" placeholder="주소"><br>-->
       <div class="user-type">
-        관리자 <input type="radio" v-model="joinInput.userType" class="join-type" value="ADM">
+        사업자 <input type="radio" v-model="joinInput.userType" class="join-type" value="ADM">
         일반 사용자 <input type="radio" v-model="joinInput.userType" class="join-type" value="USER">
       </div>
       <br>

@@ -11,21 +11,45 @@
   text-align: right;
   color: #FFFFFF;
 
+  @include sw {
+    height: 26px;
+  }
+
   .user-qna {
     padding: 8px;
     font-size: 13px;
     color: white;
     cursor: pointer;
+
+    @include fw {
+      font-size: 11px;
+    }
+
+    @include sw {
+      font-size: 10px;
+    }
   }
 
   .line {
     margin-top: 8px;
+
+    @include fw {
+      margin-top: 5px;
+    }
   }
 
   .user-login {
     padding: 8px;
     font-size: 13px;
     cursor: pointer;
+
+    @include fw {
+      font-size: 11px;
+    }
+
+    @include sw {
+      font-size: 10px;
+    }
   }
 
   .if-admin {
@@ -37,6 +61,14 @@
     padding: 8px;
     font-size: 13px;
     cursor: pointer;
+
+    @include fw {
+      font-size: 11px;
+    }
+
+    @include sw {
+      font-size: 10px;
+    }
   }
 
   .if-user {
@@ -48,11 +80,27 @@
     padding: 8px;
     font-size: 13px;
     cursor: pointer;
+
+    @include fw {
+      font-size: 11px;
+    }
+
+    @include sw {
+      font-size: 10px;
+    }
   }
 
   .user-logout {
     padding: 8px;
     font-size: 13px;
     cursor: pointer;
+
+    @include fw {
+      font-size: 11px;
+    }
+
+    @include sw {
+      font-size: 10px;
+    }
   }
 }

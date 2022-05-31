@@ -1,0 +1,39 @@
+section {
+  .qna-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: $forth-color;
+    margin-top: 80px;
+    margin-left: 100px;
+    text-shadow: 1px 1px 1px $third-color;
+  }
+
+  .qna-table {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px;
+    box-shadow: 0px 0px 1px $second-color;
+
+    table {
+      thead {
+        tr {
+          th {
+            width: 20%;
+            font-size: 24px;
+            color: $third-color;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          cursor: pointer;
+
+          td {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

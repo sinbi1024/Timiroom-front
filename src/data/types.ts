@@ -9,6 +9,11 @@ export interface joinInfo {
   userType: string;
   userPhone: string;
   userPassword: string;
-  userAddress: string;
   loginUser: "SINBI" | undefined | null;
+}
+
+export interface qnaData {
+  keyNum: number;
+  title: string;
+  date: string;
 }

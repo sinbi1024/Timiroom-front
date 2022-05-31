@@ -11,6 +11,14 @@
         justify-content: center;
         margin-top: 200px;
 
+        @include fw {
+          margin-top: 150px;
+        }
+
+        @include sw {
+          margin-top: 100px;
+        }
+
         .icon {
           content: url("public/assets/image/icon-check.png");
           width: 50px;
@@ -57,6 +65,7 @@
 
         @include fw {
           font-size: 20px;
+          margin-bottom: 100px;
         }
 
         @include sw {

@@ -73,13 +73,14 @@
 
     @include fw {
       top: 120px;
+      left: 50px;
     }
     @include sw {
       top: 90px;
     }
     @include se {
       top: 60px;
-      left: 50px;
+      left: 30px;
     }
 
     .inner-text {
