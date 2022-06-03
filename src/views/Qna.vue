@@ -1,35 +1,35 @@
 <script lang="ts">
 import {defineComponent, onMounted, ref} from "vue";
 import {qnaData} from "../data/types";
+import boardTable from "../components/boardTable.vue";
 
 export default defineComponent({
   name: "PageInit",
+  components: {boardTable},
   setup() {
     const qnas = ref<Array<qnaData>>([
       {
         keyNum: 1,
         title: '문의1',
-        date: new Date().getFullYear().toString() + new Date().getMonth().toString() + new Date().getDate().toString()
+        date: '2022. 6. 3. 오후 5:25:34',
+        user: 'snb@jmail.ac.kr'
       },
       {
         keyNum: 2,
         title: '문의2',
-        date: new Date().getFullYear().toString() + new Date().getMonth().toString() + new Date().getDate().toString()
+        date: '2022. 6. 3. 오후 5:25:34',
+        user: 'ub@jmail.ac.kr'
       },
       {
         keyNum: 3,
         title: '문의3',
-        date: new Date().getFullYear().toString() + new Date().getMonth().toString() + new Date().getDate().toString()
+        date: '2022. 6. 3. 오후 5:25:34',
+        user: 'cl0ud@jmail.ac.kr'
       }
     ]);
 
-    const sorry = () => {
-      alert('아직 게시글 페이지를 못 만들었습니다. 개발자가 죄송합니다.');
-    }
-
     return {
       qnas,
-      sorry,
     }
   },
 
@@ -38,25 +38,8 @@ export default defineComponent({
 
 <template>
   <section>
-    <hr>
-    <div class="qna-title">문의 목록</div>
-    <div class="qna-table">
-      <table>
-        <thead>
-        <tr>
-          <th>번호</th>
-          <th>제목</th>
-          <th>작성일</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr v-for="item in qnas" @click="sorry">
-          <td>{{ item.keyNum }}</td>
-          <td>{{ item.title }}</td>
-          <td>{{ item.date }}</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
+    <board-table
+        :board-list="qnas"
+    ></board-table>
   </section>
 </template>

@@ -16,4 +16,5 @@ export interface qnaData {
   keyNum: number;
   title: string;
   date: string;
+  user: string;
 }
