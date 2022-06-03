@@ -6,6 +6,20 @@ section {
     margin-top: 80px;
     margin-left: 100px;
     text-shadow: 1px 1px 1px $third-color;
+
+    @include fw {
+      font-size: 32px;
+      margin-left: 70px;
+    }
+
+    @include sw {
+      font-size: 28px;
+      margin-left: 40px;
+    }
+
+    @include se {
+      font-size: 24px;
+    }
   }
 
   .qna-table {
@@ -14,19 +28,67 @@ section {
     margin: 20px 90px;
     box-shadow: 0px 0px 1px $second-color;
 
+    @include fw {
+      margin: 20px 50px;
+    }
+
+    @include sw {
+      margin: 20px 30px;
+    }
+
+    @include se {
+      margin: 20px 10px;
+    }
+
     .qna-thead {
       font-size: 24px;
       color: $third-color;
 
+      @include fw {
+        font-size: 20px;
+      }
+
+      @include sw {
+        font-size: 16px;
+      }
+
+      @include se {
+        font-size: 12px;
+      }
+
       tr {
         th {
           padding: 20px;
+
+          @include fw {
+            padding: 15px;
+          }
+
+          @include sw {
+            padding: 10px;
+          }
+
+          @include se {
+            padding: 0px;
+          }
         }
       }
     }
 
     .qna-tbody {
       font-size: 20px;
+
+      @include fw {
+        font-size: 16px;
+      }
+
+      @include sw {
+        font-size: 12px;
+      }
+
+      @include se {
+        font-size: 8px;
+      }
 
       tr {
         td {
