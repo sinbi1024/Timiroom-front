@@ -1,8 +1,10 @@
 <script lang="ts">
 import {defineComponent, onMounted, ref} from "vue";
+import boardViewer from '../components/boardViewer.vue';
 
 export default defineComponent({
-  name: "PageInit",
+  name: "QnaViewer",
+  components: {boardViewer},
   setup() {
 
     return {}
@@ -13,7 +15,7 @@ export default defineComponent({
 
 <template>
   <section>
-    관리자 페이지를 어쩌다 내가.
+    <board-viewer></board-viewer>
   </section>
 </template>
 

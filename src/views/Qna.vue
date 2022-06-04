@@ -11,18 +11,21 @@ export default defineComponent({
       {
         keyNum: 1,
         title: '문의1',
+        contents: '문의합니다.',
         date: '2022. 6. 3. 오후 5:25:34',
         user: 'snb@jmail.ac.kr'
       },
       {
         keyNum: 2,
         title: '문의2',
+        contents: '문의합니다.',
         date: '2022. 6. 3. 오후 5:25:34',
         user: 'ub@jmail.ac.kr'
       },
       {
         keyNum: 3,
         title: '문의3',
+        contents: '문의합니다.',
         date: '2022. 6. 3. 오후 5:25:34',
         user: 'cl0ud@jmail.ac.kr'
       }

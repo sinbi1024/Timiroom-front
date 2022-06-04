@@ -15,6 +15,7 @@ export interface joinInfo {
 export interface qnaData {
   keyNum: number;
   title: string;
+  contents: string;
   date: string;
   user: string;
 }
