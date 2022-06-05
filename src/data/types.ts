@@ -8,8 +8,8 @@ export interface joinInfo {
   userEmail: string;
   userType: string;
   userPhone: string;
+  userAddress: string;
   userPassword: string;
-  loginUser: "SINBI" | undefined | null;
 }
 
 export interface qnaData {

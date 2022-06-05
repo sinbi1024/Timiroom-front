@@ -19,7 +19,6 @@ export default defineComponent({
       userPhone: '',
       userPassword: '',
       userAddress: '',
-      loginUser: "SINBI",
     });
 
     let date = new Date();
@@ -50,10 +49,10 @@ export default defineComponent({
           .then((res) => {
             if (res.data.resultCode === 0) {
               window.alert("로그인 성공");
-              setUserInfo(res.data.data[0]);
+              setUserInfo(res.data.data);
               window.location.replace('/main');
             } else {
-              console.log(res.data.data[0]);
+              console.log(res.data.data);
               window.alert("로그인 실패");
               return 1;
             }

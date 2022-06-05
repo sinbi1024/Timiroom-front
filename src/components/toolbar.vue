@@ -4,7 +4,6 @@ import {defineComponent, onMounted, ref} from "vue";
 export default defineComponent({
   name: "PageInit",
   setup() {
-    let adminMode = ref(false);
     let userMode = ref(false);
 
     onMounted(
@@ -38,7 +37,6 @@ export default defineComponent({
 
     return {
       changeMode,
-      adminMode,
       userMode,
       goQna,
       logout,
