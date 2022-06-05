@@ -17,9 +17,7 @@ export default defineComponent({
       console.log(userInfo);
 
       if (userInfo) {
-        if (userInfo.userType === "USER") {
-          userMode.value = true;
-        }
+        userMode.value = true;
       } else {
         userMode.value = false;
       }
