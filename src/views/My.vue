@@ -1,5 +1,5 @@
 <script lang="ts">
-import {defineComponent, onMounted, ref} from "vue";
+import {defineComponent, nextTick, onMounted, ref} from "vue";
 import {userInfo, userTypeInterface} from "../data/types";
 
 
@@ -53,6 +53,11 @@ export default defineComponent({
     onMounted(() => {
       getUserInfo();
       playSvg();
+
+      nextTick(() => {
+        ScrollReveal().reveal('.profile-data-area');
+      })
+
     });
 
     return {
