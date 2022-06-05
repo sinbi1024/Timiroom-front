@@ -2,10 +2,11 @@
 import {defineComponent, onMounted, ref} from "vue";
 import {userInfo, userTypeInterface} from "../data/types";
 
+
 export default defineComponent({
   name: "My",
   setup() {
-    const profileImgPath = ref<string>("../../public/assets/image/cat.png");
+    const profileImgPath = ref<string>("/assets/image/cat.png");
     const filePreview = ref<Blob | null>(null);
     const userData = ref<userTypeInterface | null>(null);
     const editMode = ref<boolean>(false);
@@ -43,8 +44,15 @@ export default defineComponent({
       console.log('do Save')
     }
 
+    const playSvg = () => {
+      const vivus = new Vivus('test2', {duration: 200, file: '/assets/image/svg/test2_animated.svg'}, (v) => {
+        v.play(v.getStatus() === 'end' ? -1 : 1);
+      });
+    }
+
     onMounted(() => {
       getUserInfo();
+      playSvg();
     });
 
     return {
@@ -108,6 +116,7 @@ export default defineComponent({
              value="저장하기">
       </span>
     </div>
+    <div id="test2"></div>
   </section>
 </template>
 
