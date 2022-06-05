@@ -3,7 +3,7 @@ import {defineComponent, onMounted, ref} from "vue";
 import router from "../router";
 
 export default defineComponent({
-  name: "PageInit",
+  name: "menubar",
   setup() {
     const moveTo = (path: string) => {
       router.push(path);

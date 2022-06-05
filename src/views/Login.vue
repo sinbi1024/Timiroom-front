@@ -5,7 +5,7 @@ import axios from "axios";
 import router from "../router";
 
 export default defineComponent({
-  name: "PageInit",
+  name: "login",
   setup() {
     const userInput = ref<userInfo>({
       userEmail: '',

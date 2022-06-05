@@ -3,8 +3,17 @@ import {defineComponent, ref, onMounted, onUnmounted} from "vue";
 // import ScrollOut from "scroll-out";
 
 export default defineComponent({
-  name: "PageInit",
+  name: "home",
   setup() {
+    const test = () => {
+      new Vivus('test-div', {duration: 200, file: '/assets/image/svg/test.svg'}, (v) => {
+        v.play(v.getStatus() === 'end' ? -1 : 1)
+      });
+    }
+
+    onMounted(() => {
+      test();
+    })
     // ScrollOut({
     //   onShown: function (el) {
     //     // use the web animation API
@@ -58,7 +67,8 @@ export default defineComponent({
     <div class="user-wrap">
       <div class="user-img-main">
         <div class="user-text">
-          <span class="inner-text">SMART FACTORY</span><br>
+          <div id="test-div"></div>
+          <!--          <span class="inner-text">SMART FACTORY</span><br>-->
           <span class="inner-sub-text">미래 제조 혁신, 스마트 팩토리</span>
         </div>
       </div>
