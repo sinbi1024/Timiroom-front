@@ -20,7 +20,7 @@ export default defineComponent({
       <div class="user-img-summary Fades">
       </div>
       <div class="user-text Fades">
-        <span class="inner-text ">New Things, New Values</span><br>
+        <span class="inner-text">New Things, New Values</span><br>
         <div class="inner-sub-text ">새로운 기술에 발맞춰 새로운 가치를 만들어갑니다.</div>
       </div>
     </div>
@@ -57,7 +57,7 @@ export default defineComponent({
       </div>
 
       <div class="problems-sec Fades">
-        <img class="problems Fades" src="../../public/assets/image/problems.png">
+        <img class="problems Fades" src="/assets/image/problems.png">
       </div>
 
       <div class="sub-title Fades">

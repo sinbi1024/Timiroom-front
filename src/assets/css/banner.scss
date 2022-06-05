@@ -16,7 +16,7 @@
 
   .user-img {
     &-main {
-      background-image: url("public/assets/image/banner-main.png");
+      background-image: url("/assets/image/banner-main.png");
       background-size: 100%;
       opacity: 80%;
       position: absolute;
@@ -28,7 +28,7 @@
     }
 
     &-summary {
-      background-image: url("public/assets/image/banner-summary.jpg");
+      background-image: url("/assets/image/banner-summary.jpg");
       background-size: 100%;
       opacity: 80%;
       position: absolute;
@@ -40,7 +40,7 @@
     }
 
     &-service {
-      background-image: url("public/assets/image/banner-service.jpg");
+      background-image: url("/assets/image/banner-service.jpg");
       background-size: 100%;
       opacity: 80%;
       position: absolute;
@@ -52,7 +52,7 @@
     }
 
     &-tech {
-      background-image: url("public/assets/image/banner-tech.jpg");
+      background-image: url("/assets/image/banner-tech.jpg");
       background-size: 100%;
       opacity: 80%;
       position: absolute;

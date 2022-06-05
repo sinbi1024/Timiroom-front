@@ -19,7 +19,7 @@ export default defineComponent({
 <template>
   <section>
     <div class="menu">
-      <img class="logo" @click="moveTo('/main')" src="../../public/assets/image/logo.png">
+      <img class="logo" @click="moveTo('/main')" src="/assets/image/logo.png">
       <div class="menu-text">
         <div @click="moveTo('/summ')">개요</div>
         <div @click="moveTo('/service')">서비스</div>
