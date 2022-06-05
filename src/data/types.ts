@@ -3,6 +3,14 @@ export interface userInfo {
   userPassword: string;
 }
 
+export interface userTypeInterface {
+  userName: string;
+  userEmail: string;
+  userType: string;
+  userPhone: string;
+  userAddress: string;
+}
+
 export interface joinInfo {
   userName: string;
   userEmail: string;
