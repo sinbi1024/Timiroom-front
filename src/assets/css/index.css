@@ -641,72 +641,72 @@ b {
   cursor: pointer;
 }
 
-.summary .summary-context {
+.summary-context {
   display: flex;
   flex-direction: column;
   margin: 0px 200px;
 }
 @media (max-width: 700px) {
-  .summary .summary-context {
+  .summary-context {
     margin: 0px 100px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  .summary .summary-context {
+  .summary-context {
     margin: 0px 50px;
     transition: 1s;
   }
 }
 @media (max-width: 375px) {
-  .summary .summary-context {
+  .summary-context {
     margin: 0px 30px;
     transition: 1s;
   }
 }
-.summary .summary-context .sub-title {
+.summary-context .sub-title {
   display: flex;
   flex-direction: row;
   margin-top: 150px;
 }
 @media (max-width: 700px) {
-  .summary .summary-context .sub-title {
+  .summary-context .sub-title {
     margin-top: 100px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  .summary .summary-context .sub-title {
+  .summary-context .sub-title {
     margin-top: 80px;
     transition: 1s;
   }
 }
 @media (max-width: 375px) {
-  .summary .summary-context .sub-title {
+  .summary-context .sub-title {
     margin-top: 60px;
     transition: 1s;
   }
 }
-.summary .summary-context .sub-title .icon {
+.summary-context .sub-title .icon {
   content: url("public/assets/image/icon.png");
   width: 30px;
   height: 30px;
 }
 @media (max-width: 700px) {
-  .summary .summary-context .sub-title .icon {
+  .summary-context .sub-title .icon {
     width: 20px;
     height: 20px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  .summary .summary-context .sub-title .icon {
+  .summary-context .sub-title .icon {
     width: 15px;
     height: 15px;
     transition: 1s;
   }
 }
-.summary .summary-context .sub-title .summary-sub-title {
+.summary-context .sub-title .summary-sub-title {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -714,24 +714,24 @@ b {
   color: #273552;
 }
 @media (max-width: 700px) {
-  .summary .summary-context .sub-title .summary-sub-title {
+  .summary-context .sub-title .summary-sub-title {
     font-size: 20px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  .summary .summary-context .sub-title .summary-sub-title {
+  .summary-context .sub-title .summary-sub-title {
     font-size: 15px;
     transition: 1s;
   }
 }
 @media (max-width: 375px) {
-  .summary .summary-context .sub-title .summary-sub-title {
+  .summary-context .sub-title .summary-sub-title {
     font-size: 13px;
     transition: 1s;
   }
 }
-.summary .summary-context .summary-title {
+.summary-context .summary-title {
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 40px;
@@ -739,48 +739,48 @@ b {
   text-shadow: 1px 1px 1px #273552;
 }
 @media (max-width: 700px) {
-  .summary .summary-context .summary-title {
+  .summary-context .summary-title {
     font-size: 32px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  .summary .summary-context .summary-title {
+  .summary-context .summary-title {
     font-size: 25px;
     transition: 1s;
   }
 }
 @media (max-width: 375px) {
-  .summary .summary-context .summary-title {
+  .summary-context .summary-title {
     font-size: 22px;
     margin-bottom: 20px;
     transition: 1s;
   }
 }
-.summary .summary-context .smf-sum {
+.summary-context .smf-sum {
   font-size: 20px;
   line-height: 1.4;
   color: #525F7E;
   margin-bottom: 50px;
 }
 @media (max-width: 700px) {
-  .summary .summary-context .smf-sum {
+  .summary-context .smf-sum {
     font-size: 15px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  .summary .summary-context .smf-sum {
+  .summary-context .smf-sum {
     font-size: 10px;
     transition: 1s;
   }
 }
-.summary .summary-context .problems-sec {
+.summary-context .problems-sec {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
-.summary .summary-context .problems-sec .problems {
+.summary-context .problems-sec .problems {
   width: 90%;
 }
 
@@ -1285,6 +1285,39 @@ b {
 .my-page-page .profile-data-area span.btn {
   display: flex;
   justify-content: space-evenly;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: all 1s;
+}
+
+.slide-enter, .slide-leave-to {
+  transform: translateX(-100%);
+}
+
+.fade-action {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.fade-actived {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.slide-left-action {
+  transform: translateX(0);
+  transition: all 0.7s;
+}
+.slide-left-actived {
+  transform: translateX(-100%);
+  transition: all 0.7s;
 }
 
 /*# sourceMappingURL=index.css.map */

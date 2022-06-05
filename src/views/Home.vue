@@ -14,48 +14,7 @@ export default defineComponent({
     onMounted(() => {
       test();
     })
-    // ScrollOut({
-    //   onShown: function (el) {
-    //     // use the web animation API
-    //     el.animate([{opacity: 0}, {opacity: 1}], 1000);
-    //   },
-    //   onHidden: function (el) {
-    //     // hide the element initially
-    //     el.style.opacity = 0;
-    //   }
-    // });
-    //
-    // ScrollOut();
-    //
-    // const addScrollEvent = () => {
-    //   console.log('keyEventListener On!');
-    //   window.addEventListener('scroll', eventHandler);
-    // }
-    //
-    // const eventHandler = (e) => {
-    //   const scroll = window.scrollY;
-    //
-    //   if (scroll > 360 && scroll <= 497) {
-    //     console.log(scroll);
-    //   }
-    //
-    //   if (scroll > 1150 && scroll <= 1190) {
-    //     console.log(scroll);
-    //   }
-    // }
-    //
-    // const removeScrollEvent = () => {
-    //   console.log('remove evnet!');
-    //   window.removeEventListener('scroll', eventHandler)
-    // }
-    //
-    // onMounted(() => {
-    //   addScrollEvent()
-    // });
-    //
-    // onUnmounted(() => {
-    //   removeScrollEvent();
-    // })
+
 
     return {}
   },
