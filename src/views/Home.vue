@@ -6,8 +6,9 @@ export default defineComponent({
   name: "home",
   setup() {
     const test = () => {
-      new Vivus('test-div', {duration: 200, file: '/assets/image/svg/test.svg'}, (v) => {
-        v.play(v.getStatus() === 'end' ? -1 : 1)
+      const vivus = new Vivus('test-div', {duration: 200, file: '/assets/image/svg/smart-factory.svg'}, (v) => {
+        v.play(v.getStatus() === 'end' ? -1 : 1);
+        // v.play(v.getStatus() === 'end' ? -1 : 1)
       });
     }
 
