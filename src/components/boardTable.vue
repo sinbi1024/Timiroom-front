@@ -59,11 +59,15 @@ export default defineComponent({
       </div>
     </div>
 
-    <div v-if="viewState">
-      <div>{{ view.title }}</div>
-      <div>{{ view.contents }}</div>
-      <div>{{ view.user }}</div>
-      <input type="button" value="목록" @click="viewState = false">
+    <div class="board-viewer" v-if="viewState">
+      <div class="viewer-section">
+        <div class="viewer-title">{{ view.title }}</div>
+        <div class="viewer-contents">{{ view.contents }}</div>
+        <div class="viewer-user">{{ view.user }}</div>
+      </div>
+      <div class="btn-section">
+        <input type="button" class="back-btn" value="목록" @click="viewState = false">
+      </div>
     </div>
   </section>
 </template>

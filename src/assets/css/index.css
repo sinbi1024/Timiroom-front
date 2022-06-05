@@ -1040,7 +1040,7 @@ b {
   }
 }
 
-section .qna-title {
+.board-table .qna-title {
   font-size: 36px;
   font-weight: bold;
   color: #aebbdd;
@@ -1049,115 +1049,152 @@ section .qna-title {
   text-shadow: 1px 1px 1px #273552;
 }
 @media (max-width: 700px) {
-  section .qna-title {
+  .board-table .qna-title {
     font-size: 32px;
     margin-left: 70px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  section .qna-title {
+  .board-table .qna-title {
     font-size: 28px;
     margin-left: 40px;
     transition: 1s;
   }
 }
 @media (max-width: 375px) {
-  section .qna-title {
+  .board-table .qna-title {
     font-size: 24px;
     transition: 1s;
   }
 }
-section .qna-table {
+.board-table .qna-table {
   display: flex;
   justify-content: center;
   margin: 20px 90px;
   box-shadow: 0px 0px 1px #7F8CAD;
 }
 @media (max-width: 700px) {
-  section .qna-table {
+  .board-table .qna-table {
     margin: 20px 50px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  section .qna-table {
+  .board-table .qna-table {
     margin: 20px 30px;
     transition: 1s;
   }
 }
 @media (max-width: 375px) {
-  section .qna-table {
+  .board-table .qna-table {
     margin: 20px 10px;
     transition: 1s;
   }
 }
-section .qna-table .qna-thead {
+.board-table .qna-table .qna-thead {
   font-size: 24px;
   color: #273552;
 }
 @media (max-width: 700px) {
-  section .qna-table .qna-thead {
+  .board-table .qna-table .qna-thead {
     font-size: 20px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  section .qna-table .qna-thead {
+  .board-table .qna-table .qna-thead {
     font-size: 16px;
     transition: 1s;
   }
 }
 @media (max-width: 375px) {
-  section .qna-table .qna-thead {
+  .board-table .qna-table .qna-thead {
     font-size: 12px;
     transition: 1s;
   }
 }
-section .qna-table .qna-thead tr th {
+.board-table .qna-table .qna-thead tr th {
   padding: 20px;
 }
 @media (max-width: 700px) {
-  section .qna-table .qna-thead tr th {
+  .board-table .qna-table .qna-thead tr th {
     padding: 15px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  section .qna-table .qna-thead tr th {
+  .board-table .qna-table .qna-thead tr th {
     padding: 10px;
     transition: 1s;
   }
 }
 @media (max-width: 375px) {
-  section .qna-table .qna-thead tr th {
+  .board-table .qna-table .qna-thead tr th {
     padding: 0px;
     transition: 1s;
   }
 }
-section .qna-table .qna-tbody {
+.board-table .qna-table .qna-tbody {
   font-size: 20px;
 }
 @media (max-width: 700px) {
-  section .qna-table .qna-tbody {
+  .board-table .qna-table .qna-tbody {
     font-size: 16px;
     transition: 1s;
   }
 }
 @media (max-width: 520px) {
-  section .qna-table .qna-tbody {
+  .board-table .qna-table .qna-tbody {
     font-size: 12px;
     transition: 1s;
   }
 }
 @media (max-width: 375px) {
-  section .qna-table .qna-tbody {
+  .board-table .qna-table .qna-tbody {
     font-size: 8px;
     transition: 1s;
   }
 }
-section .qna-table .qna-tbody tr td {
+.board-table .qna-table .qna-tbody tr td {
   padding: 10px;
+  cursor: pointer;
+}
+.board-table .board-viewer .viewer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0px 0px 2px #525F7E;
+  margin-top: 100px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+.board-table .board-viewer .viewer-section .viewer-title {
+  font-size: 36px;
+  margin: 15px 15px;
+}
+.board-table .board-viewer .viewer-section .viewer-contents {
+  font-size: 32px;
+  padding: 100px 15px;
+}
+.board-table .board-viewer .viewer-section .viewer-user {
+  font-size: 24px;
+  margin: 15px 15px;
+}
+.board-table .board-viewer .btn-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 100px;
+}
+.board-table .board-viewer .btn-section .back-btn {
+  width: 60px;
+  height: 30px;
+  background-color: #7F8CAD;
+  color: #FFFFFF;
+  opacity: 70%;
+  border: 1px solid #525F7E;
+  border-radius: 10px;
   cursor: pointer;
 }
 
