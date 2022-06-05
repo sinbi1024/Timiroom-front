@@ -2,7 +2,7 @@
 import {defineComponent, onMounted, ref} from "vue";
 
 export default defineComponent({
-  name: "PageInit",
+  name: "toolbar",
   setup() {
     let userMode = ref(false);
 

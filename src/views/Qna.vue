@@ -4,7 +4,7 @@ import {qnaData} from "../data/types";
 import boardTable from "../components/boardTable.vue";
 
 export default defineComponent({
-  name: "PageInit",
+  name: "qna",
   components: {boardTable},
   setup() {
     const qnas = ref<Array<qnaData>>([

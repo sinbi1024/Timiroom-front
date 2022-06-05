@@ -2,6 +2,7 @@
 import {defineComponent, nextTick, onMounted} from "vue";
 
 export default defineComponent({
+  name: "summary",
   setup() {
     onMounted(() => {
       nextTick(() => {

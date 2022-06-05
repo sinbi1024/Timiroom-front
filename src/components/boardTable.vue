@@ -12,6 +12,7 @@ export default defineComponent({
     }
   },
   setup() {
+    const userMode = ref<boolean>(false);
     const labels = {keyNum: '번호', title: '제목', date: '작성일', user: '작성자'};
     const view = ref<object>({});
 
@@ -22,11 +23,23 @@ export default defineComponent({
       viewState.value = true;
     }
 
+    onMounted(() => {
+      const userInfo = JSON.parse(localStorage.getItem('userInput'));
+      console.log(userInfo);
+
+      if (userInfo) {
+        userMode.value = true;
+      } else {
+        userMode.value = false;
+      }
+    })
+
     return {
       labels,
       view,
       viewState,
       changeViewState,
+      userMode,
     }
   },
 
@@ -57,6 +70,7 @@ export default defineComponent({
           </tbody>
         </table>
       </div>
+      <input type="button" class="write-btn" value="작성" v-if="userMode" @click="$router.push('/qnawrite')">
     </div>
 
     <div class="board-viewer" v-if="viewState">

@@ -22,6 +22,18 @@
     }
   }
 
+  .write-btn {
+    width: 60px;
+    height: 30px;
+    background-color: #7F8CAD;
+    color: #FFFFFF;
+    opacity: 70%;
+    border: 1px solid #525F7E;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 100px;
+  }
+
   .qna-table {
     display: flex;
     justify-content: center;
