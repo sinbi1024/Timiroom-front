@@ -1,11 +1,29 @@
 <script lang="ts">
-import {defineComponent} from "vue";
+import {defineComponent, nextTick, onMounted, ref} from "vue";
 
 export default defineComponent({
   name: "tech",
   setup() {
+    const scrollValue = ref<number>(0);
+    const scrollEvent = () => {
+      const scroll = addEventListener('scroll', () => {
+        scrollValue.value = window.scrollY;
+        console.log(scrollValue.value);
+      })
+    }
 
-    return {}
+    onMounted(() => {
+      scrollEvent();
+      const v = document.getElementsByClassName('service-card');
+      console.log('client height : ', v);
+      // console.log('client height : ', v[0].offsetTop);
+      nextTick(() => {
+      })
+    })
+
+    return {
+      scrollValue,
+    }
   }
 })
 </script>
@@ -30,7 +48,9 @@ export default defineComponent({
           </div>
         </div>
         <div class="smf-tech">
-          <img class="point-conveyor">
+          <div :class="scrollValue > 480 ? 'fade-actived' : 'fade-action'">
+            <img class="point-conveyor">
+          </div>
           <div class="tech">
             <b>색상을 감지</b>해서 하드웨어 <b>내부적 로직</b>을 통해<br>
             불량을 감지하고 불량 여부에 따라서 분류 바에 달린<br>
@@ -45,7 +65,9 @@ export default defineComponent({
           </div>
         </div>
         <div class="smf-tech">
-          <img class="point-web-control">
+          <div :class="scrollValue > 1180 ? 'fade-actived' : 'fade-action'">
+            <img class="point-web-control">
+          </div>
           <div class="tech">
             웹에서 각 설비의 가동 현황을 모니터링 할 뿐만 아니라,<br>
             ON/OFF 버튼을 이용하여 <b>웹을 통한 제어</b>도 가능합니다.<br>
@@ -60,7 +82,9 @@ export default defineComponent({
           </div>
         </div>
         <div class="smf-tech">
-          <img class="point-data-collect">
+          <div :class="scrollValue > 1840 ? 'fade-actived' : 'fade-action'">
+            <img class="point-data-collect">
+          </div>
           <div class="tech">
             제품 정보, 생산 현황과 같이 <b>생산 공정에서 발생하는 데이터</b>들을 수집하여<br>
             관리자에게 빠른 <b>모니터링 시스템</b>을 지원함으로써 관리자의 <b>유연한</b> 현장 대처와<br>
