@@ -33,6 +33,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../views/Qna.vue"),
   },
   {
+    path: "/qnaWrite",
+    name: "QnAWrite",
+    component: () => import("../views/QnaWrite.vue"),
+  },
+  {
     path: "/login",
     name: "Login",
     component: () => import("../views/Login.vue"),

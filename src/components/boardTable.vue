@@ -56,8 +56,8 @@ export default defineComponent({
           <tr>
             <th>{{ labels.keyNum }}</th>
             <th>{{ labels.title }}</th>
-            <th>{{ labels.date }}</th>
             <th>{{ labels.user }}</th>
+            <th>{{ labels.date }}</th>
           </tr>
           </thead>
           <tbody class="qna-tbody">

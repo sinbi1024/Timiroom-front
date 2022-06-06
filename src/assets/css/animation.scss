@@ -37,7 +37,19 @@
   }
 
   &-actived {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
+    transition: all 0.7s;
+  }
+}
+
+.slide-left {
+  &-action {
+    transform: translateY(0);
+    transition: all 0.7s;
+  }
+
+  &-actived {
+    transform: translateY(-200%);
     transition: all 0.7s;
   }
 }

@@ -5,15 +5,15 @@ import {defineComponent, ref, onMounted, onUnmounted} from "vue";
 export default defineComponent({
   name: "home",
   setup() {
-    const test = () => {
-      const vivus = new Vivus('test-div', {duration: 200, file: '/assets/image/svg/smart-factory.svg'}, (v) => {
-        v.play(v.getStatus() === 'end' ? -1 : 1);
-        // v.play(v.getStatus() === 'end' ? -1 : 1)
-      });
-    }
+    // const test = () => {
+    //   const vivus = new Vivus('test-div', {duration: 200, file: '/assets/image/svg/smart-factory.svg'}, (v) => {
+    //     v.play(v.getStatus() === 'end' ? -1 : 1);
+    //     // v.play(v.getStatus() === 'end' ? -1 : 1)
+    //   });
+    // }
 
     onMounted(() => {
-      test();
+      // test();
     })
 
 
@@ -27,8 +27,7 @@ export default defineComponent({
     <div class="user-wrap">
       <div class="user-img-main">
         <div class="user-text">
-          <div id="test-div"></div>
-          <!--          <span class="inner-text">SMART FACTORY</span><br>-->
+          <span class="inner-text">SMART FACTORY</span><br>
           <span class="inner-sub-text">미래 제조 혁신, 스마트 팩토리</span>
         </div>
       </div>
