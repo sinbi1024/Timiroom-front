@@ -12,11 +12,13 @@ export default defineComponent({
       })
     }
 
-    scrollEvent();
-    const v = document.getElementsByClassName('service-card');
-    console.log('client height : ', v);
-    // console.log('client height : ', v[0].offsetTop);
-    nextTick(() => {
+    onMounted(() => {
+      scrollEvent();
+      const v = document.getElementsByClassName('service-card');
+      console.log('client height : ', v);
+      // console.log('client height : ', v[0].offsetTop);
+      nextTick(() => {
+      })
     })
 
     return {

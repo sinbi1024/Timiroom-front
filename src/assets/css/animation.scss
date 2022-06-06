@@ -37,19 +37,19 @@
   }
 
   &-actived {
-    transform: translateX(-200%);
+    transform: translateX(-300%);
     transition: all 0.7s;
   }
 }
 
-.slide-left {
+.slide-right {
   &-action {
-    transform: translateY(0);
+    transform: translateX(0);
     transition: all 0.7s;
   }
 
   &-actived {
-    transform: translateY(-200%);
+    transform: translateX(200%);
     transition: all 0.7s;
   }
 }

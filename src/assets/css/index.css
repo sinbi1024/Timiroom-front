@@ -1316,16 +1316,16 @@ b {
   transition: all 0.7s;
 }
 .slide-left-actived {
-  transform: translateX(-200%);
+  transform: translateX(-300%);
   transition: all 0.7s;
 }
 
-.slide-left-action {
-  transform: translateY(0);
+.slide-right-action {
+  transform: translateX(0);
   transition: all 0.7s;
 }
-.slide-left-actived {
-  transform: translateY(-200%);
+.slide-right-actived {
+  transform: translateX(200%);
   transition: all 0.7s;
 }
 
