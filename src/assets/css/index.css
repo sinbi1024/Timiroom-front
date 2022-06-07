@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Yeongdo-Rg";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff") format("woff");
+  font-family: "NeoDunggeunmo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -366,7 +366,7 @@ b {
 }
 .user-wrap .user-text {
   position: absolute;
-  font-family: Yeongdo-Rg;
+  font-family: NeoDunggeunmo;
   top: 190px;
   left: 80px;
   text-shadow: 2px 0px 6px #525F7E;
@@ -1209,6 +1209,47 @@ b {
   cursor: pointer;
 }
 
+.qna-write .write-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+.qna-write .write-area div {
+  padding: 10px;
+}
+.qna-write .write-area .write-title {
+  width: 500px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.qna-write .write-area .write-contents {
+  width: 500px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.qna-write .write-area .write-btn {
+  width: 60px;
+  height: 30px;
+  background-color: #7F8CAD;
+  color: #FFFFFF;
+  opacity: 70%;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.qna-write .write-area .write-user {
+  text-align: center;
+  width: 100px;
+  height: 30px;
+}
+.qna-write .write-area .write-date {
+  text-align: center;
+  width: 100px;
+  height: 30px;
+}
+
 .my-page-page {
   display: flex;
   flex-direction: column;
@@ -1316,7 +1357,7 @@ b {
   transition: all 0.7s;
 }
 .slide-left-actived {
-  transform: translateX(-300%);
+  transform: translateX(-400%);
   transition: all 0.7s;
 }
 
@@ -1325,7 +1366,7 @@ b {
   transition: all 0.7s;
 }
 .slide-right-actived {
-  transform: translateX(200%);
+  transform: translateX(400%);
   transition: all 0.7s;
 }
 

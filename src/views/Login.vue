@@ -52,7 +52,7 @@ export default defineComponent({
               setUserInfo(res.data.data);
               window.location.replace('/main');
             } else {
-              console.log(res.data.data);
+              console.log(res.data);
               window.alert("로그인 실패");
               return 1;
             }

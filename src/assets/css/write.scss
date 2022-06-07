@@ -1,0 +1,48 @@
+.qna-write {
+  .write-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+
+    div {
+      padding: 10px;
+    }
+
+    .write-title {
+      width: 500px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .write-contents {
+      width: 500px;
+      height: 200px;
+      margin-bottom: 10px;
+    }
+
+    .write-btn {
+      width: 60px;
+      height: 30px;
+      background-color: $second-color;
+      color: #FFFFFF;
+      opacity: 70%;
+      border: 0px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .write-user {
+      text-align: center;
+      width: 100px;
+      height: 30px;
+    }
+
+    .write-date {
+      text-align: center;
+      width: 100px;
+      height: 30px;
+    }
+  }
+}
