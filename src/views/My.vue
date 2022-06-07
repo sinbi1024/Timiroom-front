@@ -18,46 +18,53 @@ export default defineComponent({
       profileImgPath.value = filePreview.value as string;
     };
 
-    const setUserInfo = (userInput: userInfo) => {
-      let inputInfo = JSON.stringify(userInput);
-      localStorage.setItem("userInput", inputInfo);
-    };
+    // const setUserInfo = (userInput: userInfo) => {
+    //   let inputInfo = JSON.stringify(userInput);
+    //   localStorage.setItem("userInput", inputInfo);
+    // };
 
     const getUserInfo = () => {
       userData.value = JSON.parse(
           localStorage.getItem("userInput")
       ) as userTypeInterface;
-      console.log(userData.value);
     };
 
     const changeEditMode = () => {
       editMode.value = !editMode.value;
       console.log(editMode.value);
     }
+
     const doSave = () => {
-      let data = document.getElementById('form');
-      let formData = new FormData(data as HTMLFormElement);
-      for (let i of formData.entries()) {
-        console.log(i);
-      }
+      // let data = document.getElementById('form');
+      let mail = document.getElementsByName('userEmail');
+      let addr = document.getElementsByName('userAddress');
+      console.log("mail: ", mail.entries().next().value[1].value);
+      userData.value.userEmail = mail.entries().next().value[1].value;
+      userData.value.userAddress = addr.entries().next().value[1].value;
+      // let formData = new FormData(data as HTMLFormElement);
+      // for (let i of formData.entries()) {
+      //   console.log(i);
+      // }
+
+      editMode.value = !editMode.value;
 
       //axios
       console.log('do Save')
     }
 
-    const playSvg = () => {
-      const vivus = new Vivus('test2', {duration: 200, file: '/assets/image/svg/test2_animated.svg'}, (v) => {
-        v.play(v.getStatus() === 'end' ? -1 : 1);
-      });
-    }
+    // const playSvg = () => {
+    //   const vivus = new Vivus('test2', {duration: 200, file: '/assets/image/svg/test2_animated.svg'}, (v) => {
+    //     v.play(v.getStatus() === 'end' ? -1 : 1);
+    //   });
+    // }
 
     onMounted(() => {
       getUserInfo();
-      playSvg();
-
-      nextTick(() => {
-        ScrollReveal().reveal('.profile-data-area');
-      })
+      // playSvg();
+      //
+      // nextTick(() => {
+      //   ScrollReveal().reveal('.profile-data-area');
+      // })
 
     });
 
@@ -93,7 +100,7 @@ export default defineComponent({
       <form id="form">
       <span>
         <p>이름 :</p>
-        <input type="text" name="userName" :value="userData?.userName" :disabled="!editMode">
+        <input type="text" name="userName" :value="userData?.userName" disabled="disabled">
       </span>
         <span>
         <p>이메일 :</p>
@@ -103,10 +110,10 @@ export default defineComponent({
         <p>주소 :</p>
         <input type="text" name="userAddress" :value="userData?.userAddress" :disabled="!editMode">
       </span>
-        <span>
-        <p>번호 :</p>
-        <input type="text" name="userPhone" :value="userData?.userPhone" :disabled="!editMode">
-      </span>
+        <!--        <span>-->
+        <!--        <p>번호 :</p>-->
+        <!--        <input type="text" name="userPhone" :value="userData?.userPhone" :disabled="!editMode">-->
+        <!--      </span>-->
       </form>
       <span class="btn">
         <input :class="editMode ? 'edit-mode-btn-active':'edit-mode-btn'"
@@ -122,7 +129,7 @@ export default defineComponent({
              value="저장하기">
       </span>
     </div>
-    <div id="test2"></div>
+    <!--    <div id="test2"></div>-->
   </section>
 </template>
 
