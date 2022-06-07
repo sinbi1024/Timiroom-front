@@ -6,6 +6,7 @@ export default defineComponent({
   name: "home",
   setup() {
     const scrollValue = ref<number>(0);
+    const width = window.innerWidth;
     const scrollEvent = () => {
       const scroll = addEventListener('scroll', () => {
         scrollValue.value = window.scrollY;
@@ -15,9 +16,8 @@ export default defineComponent({
 
     onMounted(() => {
       scrollEvent();
-      const v = document.getElementsByClassName('service-card');
-      console.log('client height : ', v);
-      // console.log('client height : ', v[0].offsetTop);
+      const v = document.getElementsByClassName('main-card');
+      console.log('client height : ', v[0].offsetTop);
       nextTick(() => {
       })
     })
@@ -34,6 +34,7 @@ export default defineComponent({
 
 
     return {
+      width,
       scrollValue,
     }
   },
@@ -53,15 +54,18 @@ export default defineComponent({
 
     <section>
       <div class="main-card">
-        <div :class="scrollValue > 350 ? 'slide-right-action' : 'slide-right-actived'">
+        <div
+            :class="width > 520 && scrollValue > 350 ? 'slide-right-action' : width <= 520 && scrollValue > 0 ? 'slide-right-action' : 'slide-right-actived'">
           <div class="main-title">
             왜 스마트 팩토리입니까?
           </div>
         </div>
-        <div :class="scrollValue > 350 ? 'slide-left-action' : 'slide-left-actived'">
+        <div
+            :class="width > 520 && scrollValue > 350 ? 'slide-left-action' : width <= 520 && scrollValue > 0 ? 'slide-left-action' : 'slide-left-actived'">
           <img class="point-why-smf">
         </div>
-        <div :class="scrollValue > 350 ? 'slide-right-action' : 'slide-right-actived'">
+        <div
+            :class="width > 520 && scrollValue > 350 ? 'slide-right-action' : width <= 520 && scrollValue > 0 ? 'slide-right-action' : 'slide-right-actived'">
           <div class="main-context">
             많은 기업이 사업 환경 변화에 따른 위기를 맞고 있습니다.<br>
             하지만 그동안 구축해온 생산 방식, 비용 중심의 제조 및 물류 체계는 다양성 수용 및 새로운 환경 적응 등 곳곳에서 한계를 갖습니다.<br>
@@ -71,15 +75,18 @@ export default defineComponent({
       </div>
 
       <div class="main-card">
-        <div :class="scrollValue > 1170 ? 'slide-right-action' : 'slide-right-actived'">
+        <div
+            :class="width > 520 && scrollValue > 1170 ? 'slide-right-action' : width <= 520 && scrollValue > 250 ? 'slide-right-action' : 'slide-right-actived'">
           <div class="main-title">
             무엇이 필요합니까?
           </div>
         </div>
-        <div :class="scrollValue > 1170 ? 'slide-left-action' : 'slide-left-actived'">
+        <div
+            :class="width > 520 && scrollValue > 1170 ? 'slide-left-action' : width <= 520 && scrollValue > 250 ? 'slide-left-action' : 'slide-left-actived'">
           <img class="point-what-require">
         </div>
-        <div :class="scrollValue > 1170 ? 'slide-right-action' : 'slide-right-actived'">
+        <div
+            :class="width > 520 && scrollValue > 1170 ? 'slide-right-action' : width <= 520 && scrollValue > 250 ? 'slide-right-action' : 'slide-right-actived'">
           <div class="main-context">
             설비별로 발생하는 데이터를 빠르게 수집하여 <b>실시간 모니터링</b>을 제공할 수 있어야 합니다.<br>
             제품 판매, 공급망 변화에 대해 생산 시점에서부터 <b>빠르고 유연하게 대응</b>할 수 있어야 합니다.<br>

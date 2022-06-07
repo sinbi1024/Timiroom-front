@@ -8,7 +8,7 @@ export default defineComponent({
     const scrollEvent = () => {
       const scroll = addEventListener('scroll', () => {
         scrollValue.value = window.scrollY;
-        console.log(scrollValue.value);
+        console.log("tech: ", scrollValue.value);
       })
     }
 
