@@ -18,10 +18,10 @@ export default defineComponent({
       profileImgPath.value = filePreview.value as string;
     };
 
-    // const setUserInfo = (userInput: userInfo) => {
-    //   let inputInfo = JSON.stringify(userInput);
-    //   localStorage.setItem("userInput", inputInfo);
-    // };
+    const setUserInfo = (userInput: userTypeInterface) => {
+      let inputInfo = JSON.stringify(userInput);
+      localStorage.setItem("userInput", inputInfo);
+    };
 
     const getUserInfo = () => {
       userData.value = JSON.parse(
@@ -35,17 +35,22 @@ export default defineComponent({
     }
 
     const doSave = () => {
-      // let data = document.getElementById('form');
-      let mail = document.getElementsByName('userEmail');
-      let addr = document.getElementsByName('userAddress');
-      console.log("mail: ", mail.entries().next().value[1].value);
-      userData.value.userEmail = mail.entries().next().value[1].value;
-      userData.value.userAddress = addr.entries().next().value[1].value;
-      // let formData = new FormData(data as HTMLFormElement);
-      // for (let i of formData.entries()) {
-      //   console.log(i);
-      // }
+      let data = document.getElementById('form');
+      // let mail = document.getElementsByName('userEmail');
+      // let addr = document.getElementsByName('userAddress');
+      // console.log("mail: ", mail.entries().next().value[1].value);
+      // userData.value.userEmail = mail.entries().next().value[1].value;
+      // userData.value.userAddress = addr.entries().next().value[1].value;
+      let formData = new FormData(data as HTMLFormElement);
+      for (let i of formData.entries()) {
+        if (i[0] === 'userEmail') {
+          userData.value.userEmail = i[1] as string;
+        } else if (i[0] === 'userAddress') {
+          userData.value.userAddress = i[1] as string;
+        }
+      }
 
+      setUserInfo(userData.value);
       editMode.value = !editMode.value;
 
       //axios
