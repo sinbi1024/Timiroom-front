@@ -8,7 +8,7 @@
 .login-title {
   font-size: 32px;
   font-weight: bold;
-  color: #525F7E;
+  color: $first-color;
   margin-bottom: 20px;
 }
 
@@ -25,10 +25,10 @@
 .login-btn {
   width: 70px;
   height: 40px;
-  background-color: #7F8CAD;
+  background-color: $second-color;
   color: #FFFFFF;
   opacity: 70%;
-  border: 1px solid #525F7E;
+  border: 0;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -40,7 +40,7 @@
   margin-top: 30px;
   margin-bottom: 100px;
   cursor: pointer;
-  color: #7F8CAD;
+  color: $second-color;
 }
 
 .go-login {
@@ -50,7 +50,7 @@
   margin-top: 30px;
   margin-bottom: 100px;
   cursor: pointer;
-  color: #7F8CAD;
+  color: $second-color;
 }
 
 .join {
@@ -63,7 +63,7 @@
 .join-title {
   font-size: 32px;
   font-weight: bold;
-  color: #525F7E;
+  color: $first-color;
   margin-bottom: 20px;
 }
 
@@ -98,7 +98,7 @@
   background-color: #7F8CAD;
   color: #FFFFFF;
   opacity: 70%;
-  border: 1px solid #525F7E;
+  border: 1px solid $first-color;
   border-radius: 10px;
   cursor: pointer;
 }

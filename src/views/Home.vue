@@ -10,14 +10,11 @@ export default defineComponent({
     const scrollEvent = () => {
       const scroll = addEventListener('scroll', () => {
         scrollValue.value = window.scrollY;
-        console.log(scrollValue.value);
       })
     }
 
     onMounted(() => {
       scrollEvent();
-      const v = document.getElementsByClassName('main-card');
-      console.log('client height : ', v[0].offsetTop);
       nextTick(() => {
       })
     })

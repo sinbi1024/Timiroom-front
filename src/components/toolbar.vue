@@ -1,5 +1,7 @@
 <script lang="ts">
 import {defineComponent, onMounted, ref} from "vue";
+import common from "../lib/common";
+import router from "../router";
 
 export default defineComponent({
   name: "toolbar",
@@ -13,14 +15,10 @@ export default defineComponent({
     )
 
     const changeMode = () => {
-      const userInfo = JSON.parse(localStorage.getItem('userInput'));
+      const userInfo = common.getUserInfo('userInput');
       console.log(userInfo);
 
-      if (userInfo) {
-        userMode.value = true;
-      } else {
-        userMode.value = false;
-      }
+      userMode.value = !!userInfo;
     }
 
     const goQna = () => {
@@ -28,8 +26,8 @@ export default defineComponent({
     }
 
     const logout = () => {
-      localStorage.removeItem('userInput');
-      window.location.replace('/#/main');
+      common.removeUserInfo('userInput');
+      router.push('/#/main');
       changeMode();
     }
 

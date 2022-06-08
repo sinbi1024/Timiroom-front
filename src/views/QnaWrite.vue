@@ -1,6 +1,7 @@
 <script lang="ts">
 import {defineComponent, onMounted, ref} from "vue";
-import {qnaData, userTypeInterface} from "../data/types";
+import {qnaData, userTypeInterface} from "../lib/types";
+import common from "../lib/common";
 
 export default defineComponent({
   name: "qnaWrite",
@@ -13,18 +14,13 @@ export default defineComponent({
       date: new Date().toLocaleString(),
     });
 
-    const getUserInfo = () => {
-      userData.value = JSON.parse(
-          localStorage.getItem("userInput")
-      ) as userTypeInterface;
-    };
-
     const click = () => {
       console.log(inputData);
     }
 
     onMounted(() => {
-      getUserInfo();
+      userData.value = JSON.parse(common.getUserInfo('userInput'));
+      console.log(userData.value);
       inputData.value.user = userData.value.userName as string;
     })
 

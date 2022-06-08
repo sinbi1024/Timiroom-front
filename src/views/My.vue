@@ -1,32 +1,21 @@
 <script lang="ts">
 import {defineComponent, nextTick, onMounted, ref} from "vue";
-import {userInfo, userTypeInterface} from "../data/types";
-
+import {userInfo, userTypeInterface} from "../lib/types";
+import common from "../lib/common";
 
 export default defineComponent({
   name: "My",
   setup() {
-    const profileImgPath = ref<string>("/assets/image/cat.png");
+    const profileImgPath = ref<string>('/assets/image/cat.png');
     const filePreview = ref<Blob | null>(null);
     const userData = ref<userTypeInterface | null>(null);
     const editMode = ref<boolean>(false);
 
     const changeProfile = (e: Event) => {
       const v = e.target as HTMLInputElement;
-      console.log(v.files[0]);
+      // console.log(v.files[0]);
       filePreview.value = URL.createObjectURL(v.files[0]) as Blob;
       profileImgPath.value = filePreview.value as string;
-    };
-
-    const setUserInfo = (userInput: userTypeInterface) => {
-      let inputInfo = JSON.stringify(userInput);
-      localStorage.setItem("userInput", inputInfo);
-    };
-
-    const getUserInfo = () => {
-      userData.value = JSON.parse(
-          localStorage.getItem("userInput")
-      ) as userTypeInterface;
     };
 
     const changeEditMode = () => {
@@ -50,11 +39,10 @@ export default defineComponent({
         }
       }
 
-      setUserInfo(userData.value);
+      common.setUserInfo(userData.value);
       editMode.value = !editMode.value;
 
-      //axios
-      console.log('do Save')
+      console.log('do Save');
     }
 
     // const playSvg = () => {
@@ -64,11 +52,11 @@ export default defineComponent({
     // }
 
     onMounted(() => {
-      getUserInfo();
+      userData.value = JSON.parse(common.getUserInfo('userInput'));
       // playSvg();
       //
       // nextTick(() => {
-      //   ScrollReveal().reveal('.profile-data-area');
+      //   ScrollReveal().reveal('.profile-lib-area');
       // })
 
     });

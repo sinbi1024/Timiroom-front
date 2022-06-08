@@ -1,6 +1,6 @@
 <script lang="ts">
 import {defineComponent, onMounted, ref} from "vue";
-import {qnaData} from "../data/types";
+import {qnaData} from "../lib/types";
 import boardTable from "../components/boardTable.vue";
 
 export default defineComponent({

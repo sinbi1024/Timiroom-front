@@ -1,6 +1,6 @@
 <script lang="ts">
 import {defineComponent, onMounted, PropType, ref} from "vue";
-import {qnaData} from "../data/types";
+import {qnaData} from "../lib/types";
 import router from "../router";
 
 export default defineComponent({

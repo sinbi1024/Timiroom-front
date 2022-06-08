@@ -238,27 +238,6 @@ b {
     transition: 1s;
   }
 }
-.tool .if-admin {
-  display: flex;
-  flex-direction: row;
-}
-.tool .admin-page {
-  padding: 8px;
-  font-size: 13px;
-  cursor: pointer;
-}
-@media (max-width: 700px) {
-  .tool .admin-page {
-    font-size: 11px;
-    transition: 1s;
-  }
-}
-@media (max-width: 520px) {
-  .tool .admin-page {
-    font-size: 10px;
-    transition: 1s;
-  }
-}
 .tool .if-user {
   display: flex;
   flex-direction: row;
@@ -566,7 +545,7 @@ b {
   background-color: #7F8CAD;
   color: #FFFFFF;
   opacity: 70%;
-  border: 1px solid #525F7E;
+  border: 0;
   border-radius: 10px;
   cursor: pointer;
 }

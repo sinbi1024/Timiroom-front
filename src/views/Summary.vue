@@ -9,18 +9,12 @@ export default defineComponent({
     const scrollEvent = () => {
       const scroll = addEventListener('scroll', () => {
         scrollValue.value = window.scrollY;
-        console.log("summary: ", scrollValue.value);
       })
     }
 
 
     onMounted(() => {
       scrollEvent();
-      const v = document.getElementsByClassName('user-text');
-      const k = document.getElementsByClassName('inner-text');
-      console.log('client height : ', v);
-      console.log('client height : ', v[0].offsetTop);
-      console.log('client height k : ', k[0].scrollHeight)
       nextTick(() => {
       })
     });

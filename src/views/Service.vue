@@ -44,7 +44,7 @@ export default defineComponent({
       <div :class="scrollValue > 220 ? 'slide-left-action' : 'slide-left-actived'">
         <div class="service-card">
           <img class="monitoring-of-product">
-          <div :class="scrollValue > 500 ? 'fade-actived' : 'fade-action'">
+          <div :class="scrollValue > 640 ? 'fade-actived' : 'fade-action'">
             <div class="about">
               <div class="service-title">
                 제품 정보
@@ -61,7 +61,7 @@ export default defineComponent({
       <div :class="scrollValue > 820 ? 'slide-left-action' : 'slide-left-actived'">
         <div class="service-card">
           <img class="monitoring-of-progress">
-          <div :class="scrollValue > 1110 ? 'fade-actived' : 'fade-action'">
+          <div :class="scrollValue > 1220 ? 'fade-actived' : 'fade-action'">
             <div class="about">
               <div class="service-title">
                 작업 진행 현황
@@ -78,7 +78,7 @@ export default defineComponent({
       <div :class="scrollValue > 1500 ? 'slide-left-action' : 'slide-left-actived'">
         <div class="service-card">
           <img class="monitoring-of-target">
-          <div :class="scrollValue > 1710 ? 'fade-actived' : 'fade-action'">
+          <div :class="scrollValue > 1830 ? 'fade-actived' : 'fade-action'">
             <div class="about">
               <div class="service-title">
                 생산 현황
@@ -95,7 +95,7 @@ export default defineComponent({
       <div :class="scrollValue > 2100 ? 'slide-left-action' : 'slide-left-actived'">
         <div class="service-card">
           <img class="monitoring-of-environ">
-          <div :class="scrollValue > 2320 ? 'fade-actived' : 'fade-action'">
+          <div :class="scrollValue > 2445 ? 'fade-actived' : 'fade-action'">
             <div class="about">
               <div class="service-title">
                 공장 환경
@@ -112,7 +112,7 @@ export default defineComponent({
       <div :class="scrollValue > 2680 ? 'slide-left-action' : 'slide-left-actived'">
         <div class="service-card">
           <img class="monitoring-of-total">
-          <div :class="scrollValue > 2925 ? 'fade-actived' : 'fade-action'">
+          <div :class="scrollValue > 3050 ? 'fade-actived' : 'fade-action'">
             <div class="about">
               <div class="service-title">
                 종합 모니터링

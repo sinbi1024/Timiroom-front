@@ -1,12 +1,13 @@
 <script lang="ts">
 import {defineComponent, onMounted, ref} from "vue";
-import {userInfo, joinInfo} from "../data/types.ts";
-import axios from "axios";
-import router from "../router";
+import {userInfo, joinInfo} from "../lib/types.ts";
+import {getApiClient} from "../plugin/axios";
+import common from "../lib/common";
 
 export default defineComponent({
   name: "login",
   setup() {
+    const apiClient = getApiClient();
     const userInput = ref<userInfo>({
       userEmail: '',
       userPassword: '',
@@ -20,8 +21,6 @@ export default defineComponent({
       userPassword: '',
       userAddress: '',
     });
-
-    let date = new Date();
 
     const joinMode = ref(false);
 
@@ -37,54 +36,55 @@ export default defineComponent({
       return true;
     }
 
-    const login = (userInput: userInfo) => {
-      if (!checkInput(userInput)) {
-        return false;
-      }
-
-      const url = "http://localhost:4000/api/users/login";
-
-      axios
-          .post(url, userInput)
+    const Axios = async (url: string, data: object) => {
+      let vo;
+      await apiClient
+          .post(url, data)
           .then((res) => {
+            console.log(res.data.data);
             if (res.data.resultCode === 0) {
-              window.alert("로그인 성공");
-              setUserInfo(res.data.data);
-              window.location.replace('/main');
-            } else {
-              console.log(res.data);
-              window.alert("로그인 실패");
-              return 1;
+              if (url === '/users/login') {
+                common.setUserInfo(res.data.data);
+              }
+              vo = res.data.data;
             }
           })
           .catch((e) => {
             console.error(e);
           })
+      return vo;
     }
 
-    const join = (joinInput: joinInfo) => {
+    const login = async (userInput: userInfo) => {
+      if (!checkInput(userInput)) {
+        return false;
+      }
+
+      const result = await Axios('/users/login', userInput);
+
+      if (result) {
+        window.alert("로그인 성공!");
+        await location.replace("/main");
+      } else {
+        window.alert("로그인 실패!");
+        await location.reload();
+      }
+    }
+
+    const join = async (joinInput: joinInfo) => {
       if (!checkInput(joinInput)) {
         return false;
       }
 
-      const url = "http://localhost:4000/api/users/join";
+      const result = await Axios('/users/join', joinInput);
 
-      axios
-          .post(url, joinInput)
-          .then((res) => {
-            if (res.data.resultCode === 0) {
-              window.alert("회원가입 성공");
-              joinMode.value = false;
-            }
-          })
-          .catch((e) => {
-            throw e;
-          })
-    }
-
-    const setUserInfo = (userInput: userInfo) => {
-      let inputInfo = JSON.stringify(userInput);
-      localStorage.setItem('userInput', inputInfo);
+      if (result) {
+        window.alert("회원가입 성공!");
+        await location.replace("/login");
+      } else {
+        window.alert("회원가입 실패!");
+        await location.reload();
+      }
     }
 
     const changeJoinMode = () => {
