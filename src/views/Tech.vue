@@ -4,6 +4,7 @@ import {defineComponent, nextTick, onMounted, ref} from "vue";
 export default defineComponent({
   name: "tech",
   setup() {
+    const width = window.innerWidth;
     const scrollValue = ref<number>(0);
     const scrollEvent = () => {
       const scroll = addEventListener('scroll', () => {
@@ -22,6 +23,7 @@ export default defineComponent({
     })
 
     return {
+      width,
       scrollValue,
     }
   }
@@ -48,7 +50,8 @@ export default defineComponent({
           </div>
         </div>
         <div class="smf-tech">
-          <div :class="scrollValue > 480 ? 'fade-actived' : 'fade-action'">
+          <div
+              :class="width > 520 && scrollValue > 480 ? 'fade-actived' : width <= 520 && scrollValue > 70 ? 'fade-actived' : 'fade-action'">
             <img class="point-conveyor">
           </div>
           <div class="tech">
@@ -65,7 +68,8 @@ export default defineComponent({
           </div>
         </div>
         <div class="smf-tech">
-          <div :class="scrollValue > 1180 ? 'fade-actived' : 'fade-action'">
+          <div
+              :class="width > 520 && scrollValue > 1180 ? 'fade-actived' : width <= 520 && scrollValue > 560 ? 'fade-actived' : 'fade-action'">
             <img class="point-web-control">
           </div>
           <div class="tech">
@@ -82,7 +86,8 @@ export default defineComponent({
           </div>
         </div>
         <div class="smf-tech">
-          <div :class="scrollValue > 1840 ? 'fade-actived' : 'fade-action'">
+          <div
+              :class="width > 520 && scrollValue > 1840 ? 'fade-actived' : width <= 520 && scrollValue > 1040 ? 'fade-actived' : 'fade-action'">
             <img class="point-data-collect">
           </div>
           <div class="tech">
