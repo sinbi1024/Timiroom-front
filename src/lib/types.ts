@@ -1,14 +1,6 @@
 export interface userInfo {
   userEmail: string;
-  userPassword: string;
-}
-
-export interface userTypeInterface {
-  userName: string;
-  userEmail: string;
-  userType: string;
-  userPhone: string;
-  userAddress: string;
+  userPasswd: string;
 }
 
 export interface joinInfo {
@@ -17,7 +9,15 @@ export interface joinInfo {
   userType: string;
   userPhone: string;
   userAddress: string;
-  userPassword: string;
+  userPasswd: string;
+}
+
+export interface userTypeInterface {
+  userName: string;
+  userEmail: string;
+  userType: string;
+  userPhone: string;
+  userAddress: string;
 }
 
 export interface qnaData {

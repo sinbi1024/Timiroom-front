@@ -16,7 +16,7 @@ export default defineComponent({
 
     const changeMode = () => {
       const userInfo = common.getUserInfo('userInput');
-      console.log(userInfo);
+      // console.log(userInfo);
 
       userMode.value = !!userInfo;
     }

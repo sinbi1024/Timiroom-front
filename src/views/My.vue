@@ -52,6 +52,7 @@ export default defineComponent({
     // }
 
     onMounted(() => {
+      console.log(common.getUserInfo('userInput'));
       userData.value = JSON.parse(common.getUserInfo('userInput'));
       // playSvg();
       //
