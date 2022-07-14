@@ -25,5 +25,5 @@ export interface qnaData {
   title: string;
   contents: string;
   date: string;
-  user: string;
+  email: string;
 }

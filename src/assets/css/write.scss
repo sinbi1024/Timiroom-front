@@ -7,7 +7,6 @@
 
     div {
       display: flex;
-      padding: 10px;
       align-items: center;
 
       p {
@@ -36,12 +35,13 @@
       border: 0px;
       border-radius: 10px;
       cursor: pointer;
-      margin-bottom: 10px;
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
 
     .write-user {
       text-align: center;
-      width: 100px;
+      width: 150px;
       height: 30px;
     }
 

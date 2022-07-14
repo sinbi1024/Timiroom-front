@@ -1,7 +1,7 @@
 <script lang="ts">
 import {defineComponent, onMounted, PropType, ref} from "vue";
 import {qnaData} from "../lib/types";
-import router from "../router";
+import {ApiClient} from "../plugin/axios";
 
 export default defineComponent({
   name: "boardViewer",
@@ -18,9 +18,12 @@ export default defineComponent({
 
     const viewState = ref<boolean>(false);
 
-    const changeViewState = (v: qnaData) => {
-      view.value = v;
+    const changeViewState = async (v: qnaData) => {
       viewState.value = true;
+
+      const data = {title: v.title};
+      console.log(data);
+      view.value = await ApiClient('/User/Board/Detail/', data) as object;
     }
 
     onMounted(() => {
@@ -64,7 +67,7 @@ export default defineComponent({
           <tr v-for="item in boardList" @click="changeViewState(item)">
             <td>{{ item.keyNum }}</td>
             <td>{{ item.title }}</td>
-            <td>{{ item.user }}</td>
+            <td>{{ item.email }}</td>
             <td>{{ item.date }}</td>
           </tr>
           </tbody>
@@ -77,7 +80,7 @@ export default defineComponent({
       <div class="viewer-section">
         <div class="viewer-title">{{ view.title }}</div>
         <div class="viewer-contents">{{ view.contents }}</div>
-        <div class="viewer-user">{{ view.user }}</div>
+        <div class="viewer-user">{{ view.email }}</div>
       </div>
       <div class="btn-section">
         <input type="button" class="back-btn" value="목록" @click="viewState = false">

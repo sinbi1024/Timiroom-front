@@ -23,7 +23,16 @@ export const ApiClient = async (url: string, data: object | string) => {
   return await getApiClient()
     .post(url, data)
     .then((res) => {
-      console.log("냥:", res);
+      // console.log("냥:", res);
+      return res.data;
+    });
+};
+
+export const ApiClientGet = async (url: string, data: object) => {
+  return await getApiClient()
+    .get(url, data)
+    .then((res) => {
+      // console.log("멍:", res);
       return res.data;
     });
 };

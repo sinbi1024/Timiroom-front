@@ -2,12 +2,25 @@
 import {defineComponent, onMounted, ref} from "vue";
 import {qnaData} from "../lib/types";
 import boardTable from "../components/boardTable.vue";
+import {ApiClientGet} from "../plugin/axios";
 
 export default defineComponent({
   name: "qna",
   components: {boardTable},
   setup() {
     const qnas = ref<Array<qnaData>>([]);
+
+    const getBoardList = async () => {
+      const result: object = await ApiClientGet('/User/Board/List', {});
+
+      for (let i = 0; i < result.length; i++) {
+        qnas.value.push(result[i]);
+      }
+    }
+
+    onMounted(() => {
+      getBoardList();
+    })
 
     return {
       qnas,
