@@ -92,22 +92,18 @@ export default defineComponent({
     </div>
     <div class="profile-data-area">
       <form id="form">
-      <span>
-        <p>이름 :</p>
-        <input type="text" name="userName" :value="userData?.userName" disabled="disabled">
-      </span>
         <span>
-        <p>이메일 :</p>
-        <input type="text" name="userEmail" :value="userData?.userEmail" :disabled="!editMode">
-      </span>
+          <p>이름 :</p>
+          <input type="text" name="userName" :value="userData?.userName" disabled="disabled">
+        </span>
         <span>
-        <p>주소 :</p>
-        <input type="text" name="userAddress" :value="userData?.userAddress" :disabled="!editMode">
-      </span>
-        <!--        <span>-->
-        <!--        <p>번호 :</p>-->
-        <!--        <input type="text" name="userPhone" :value="userData?.userPhone" :disabled="!editMode">-->
-        <!--      </span>-->
+          <p>이메일 :</p>
+          <input type="text" name="userEmail" :value="userData?.userEmail" :disabled="!editMode">
+        </span>
+        <span>
+          <p>주소 :</p>
+          <input type="text" name="userAddress" :value="userData?.userAddress" :disabled="!editMode">
+        </span>
       </form>
       <span class="btn">
         <input :class="editMode ? 'edit-mode-btn-active':'edit-mode-btn'"

@@ -40,10 +40,10 @@ export default defineComponent({
       <input type="text" class="write-contents" v-model="inputData.contents" placeholder="내용">
       <input type="button" value="작성" class="write-btn" @click="click">
       <div>
-        작성자 <input type="text" class="write-user" :value="inputData.user" disabled="disabled"><br>
+        <p>작성자</p> <input type="text" class="write-user" :value="inputData.user" disabled="disabled"><br>
       </div>
       <div>
-        작성일 <input type="text" class="write-date" :value="inputData.date.substring(0, 10)" disabled="disabled">
+        <p>작성일</p> <input type="text" class="write-date" :value="inputData.date.substring(0, 10)" disabled="disabled">
       </div>
     </div>
   </section>

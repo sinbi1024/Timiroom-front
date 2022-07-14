@@ -62,7 +62,7 @@ export default defineComponent({
 
       if (result.message === '회원가입 성공') {
         window.alert("회원가입 성공!");
-        await location.replace("/login");
+        await location.reload();
       } else {
         window.alert("회원가입 실패!");
         await location.reload();

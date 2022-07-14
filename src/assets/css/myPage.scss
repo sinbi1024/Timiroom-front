@@ -56,9 +56,11 @@
       width: 100%;
       display: flex;
       align-items: center;
+      text-align: center;
 
       p {
         width: 30%;
+        margin-right: 10px;
       }
 
       div {
@@ -73,6 +75,7 @@
         border-radius: 8px;
         color: white;
         cursor: pointer;
+        margin-top: 20px;
 
         &-active {
           width: 50px;
@@ -82,7 +85,7 @@
           background-color: #cccccc;
           color: #222222;
           cursor: pointer;
-
+          margin-top: 20px;
         }
       }
 
