@@ -79,6 +79,7 @@ export default defineComponent({
     </div>
 
     <div class="board-viewer" v-if="viewState">
+      <div class="qna-title">문의 조회</div>
       <div class="viewer-section">
         <div class="viewer-title-section">
           <div class="viewer-title">
