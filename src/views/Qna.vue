@@ -15,6 +15,7 @@ export default defineComponent({
 
       for (let i = 0; i < result.length; i++) {
         qnas.value.push(result[i]);
+        qnas.value[i].keyNum = i + 1;
       }
     }
 

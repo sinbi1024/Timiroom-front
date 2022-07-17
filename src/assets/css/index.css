@@ -346,7 +346,7 @@ b {
 .user-wrap .user-text {
   position: absolute;
   font-family: NeoDunggeunmo;
-  top: 190px;
+  top: 250px;
   left: 80px;
   text-shadow: 2px 0px 6px #525F7E;
 }
@@ -1162,22 +1162,38 @@ b {
   margin-right: 100px;
   margin-left: 100px;
 }
-.board-table .board-viewer .viewer-section .viewer-title {
-  font-size: 36px;
+.board-table .board-viewer .viewer-section .viewer-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #aebbdd;
+  width: 100%;
+}
+.board-table .board-viewer .viewer-section .viewer-title-section .viewer-title {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: bold;
   margin: 15px 15px;
+}
+.board-table .board-viewer .viewer-section .viewer-title-section .viewer-date {
+  color: #ffffff;
+  margin-right: 15px;
 }
 .board-table .board-viewer .viewer-section .viewer-contents {
-  font-size: 32px;
-  padding: 100px 15px;
+  font-size: 18px;
+  padding: 20px 15px;
 }
 .board-table .board-viewer .viewer-section .viewer-user {
-  font-size: 24px;
+  font-size: 14px;
   margin: 15px 15px;
+}
+.board-table .board-viewer .viewer-section .viewer-user .viewer-user-user {
+  color: #aebbdd;
 }
 .board-table .board-viewer .btn-section {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-right: 100px;
 }
 .board-table .board-viewer .btn-section .back-btn {

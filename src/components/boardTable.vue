@@ -11,7 +11,7 @@ export default defineComponent({
       required: false,
     }
   },
-  setup() {
+  setup(props) {
     const userMode = ref<boolean>(false);
     const labels = {keyNum: '번호', title: '제목', date: '작성일', user: '작성자'};
     const view = ref<object>({});
@@ -35,6 +35,8 @@ export default defineComponent({
       } else {
         userMode.value = false;
       }
+
+      console.log(props.boardList.length);
     })
 
     return {
@@ -78,9 +80,21 @@ export default defineComponent({
 
     <div class="board-viewer" v-if="viewState">
       <div class="viewer-section">
-        <div class="viewer-title">{{ view.title }}</div>
-        <div class="viewer-contents">{{ view.contents }}</div>
-        <div class="viewer-user">{{ view.email }}</div>
+        <div class="viewer-title-section">
+          <div class="viewer-title">
+            {{ view.title }}
+          </div>
+          <div class="viewer-date">
+            {{ view.date }}
+          </div>
+        </div>
+        <div class="viewer-contents">
+          {{ view.contents }}
+        </div>
+        <div class="viewer-user">
+          <div class="viewer-user-user">답변 받을 이메일</div>
+          {{ view.email }}
+        </div>
       </div>
       <div class="btn-section">
         <input type="button" class="back-btn" value="목록" @click="viewState = false">
