@@ -1350,31 +1350,4 @@ b {
   transform: translateX(-100%);
 }
 
-.fade-action {
-  opacity: 0;
-  transition: opacity 1s;
-}
-.fade-actived {
-  opacity: 1;
-  transition: opacity 1s;
-}
-
-.slide-left-action {
-  transform: translateX(0);
-  transition: all 0.7s;
-}
-.slide-left-actived {
-  transform: translateX(-400%);
-  transition: all 0.7s;
-}
-
-.slide-right-action {
-  transform: translateX(0);
-  transition: all 0.7s;
-}
-.slide-right-actived {
-  transform: translateX(400%);
-  transition: all 0.7s;
-}
-
 /*# sourceMappingURL=index.css.map */

@@ -18,40 +18,40 @@
   //opacity: 0;
 }
 
-.fade {
-  &-action {
-    opacity: 0;
-    transition: opacity 1s;
-  }
-
-  &-actived {
-    opacity: 1;
-    transition: opacity 1s;
-  }
-}
-
-.slide-left {
-  &-action {
-    transform: translateX(0);
-    transition: all 0.7s;
-  }
-
-  &-actived {
-    transform: translateX(-400%);
-    transition: all 0.7s;
-  }
-}
-
-.slide-right {
-  &-action {
-    transform: translateX(0);
-    transition: all 0.7s;
-  }
-
-  &-actived {
-    transform: translateX(400%);
-    transition: all 0.7s;
-  }
-}
-
+//.fade {
+//  &-action {
+//    opacity: 0;
+//    transition: opacity 1s;
+//  }
+//
+//  &-actived {
+//    opacity: 1;
+//    transition: opacity 1s;
+//  }
+//}
+//
+//.slide-left {
+//  &-action {
+//    transform: translateX(0);
+//    transition: all 0.7s;
+//  }
+//
+//  &-actived {
+//    transform: translateX(-400%);
+//    transition: all 0.7s;
+//  }
+//}
+//
+//.slide-right {
+//  &-action {
+//    transform: translateX(0);
+//    transition: all 0.7s;
+//  }
+//
+//  &-actived {
+//    transform: translateX(400%);
+//    transition: all 0.7s;
+//  }
+//}
+//
 
